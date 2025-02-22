@@ -6,32 +6,27 @@
 #    By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/04 19:16:00 by olaaroub          #+#    #+#              #
-#    Updated: 2025/01/04 19:16:03 by olaaroub         ###   ########.fr        #
+#    Updated: 2025/02/22 20:37:10 by olaaroub         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CPP = c++
+CXX = c++
 
-CPP_FLAGS = -Wall -Wextra -Werror -std=c++98
+CXX_FLAGS = -Wall -Wextra -Werror -std=c++98 -lreadline -fsanitize=address -g3
 
-NAME = megaphone
+NAME = phonebook
 
-SRC = megaphone.cpp
-
-OBJ = $(SRC:.cpp=.o)
+SRC = phonebook.cpp contacts.cpp main.cpp
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CPP) $(CPP_FLAGS) $(OBJ) -o $(NAME)
+$(NAME): $(SRC)
+	$(CXX) $(CXX_FLAGS) $(SRC) -o $(NAME)
 
 clean:
-	rm -f $(OBJ)
 
-fclean: clean
+fclean:
 	rm -f $(NAME)
 
 re: fclean all
 .PHONY: all clean fclean re
-.SILENT: all clean fclean re $(NAME) $(OBJ)
-.SECONDARY: $(OBJ)
