@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
+#include "tools.hpp"
 
 void PhoneBook::add_contact(Contact contact)
 {
@@ -27,7 +28,8 @@ void PhoneBook::search_contact()
     int index;
     std::cout << "     index|first name| last name|  nickname" << std::endl;
     for (int i = 0; i < 3; i++)
-    {
+    {   if(this->_contacts[i].get_first_name() == "")
+            continue;
         std::cout << std::setw(10) << i << "|";
         std::cout << std::setw(10) << this->_contacts[i].get_first_name() << "|";
         std::cout << std::setw(10) << this->_contacts[i].get_last_name() << "|";
@@ -38,11 +40,13 @@ void PhoneBook::search_contact()
     if (input.length() == 1 && input[0] >= '0' && input[0] <= '7')
     {
         index = input[0] - '0';
-        std::cout << "first name: " << this->_contacts[index].get_first_name() << std::endl;
-        std::cout << "last name: " << this->_contacts[index].get_last_name() << std::endl;
-        std::cout << "nickname: " << this->_contacts[index].get_nickname() << std::endl;
-        std::cout << "phone number: " << this->_contacts[index].get_phone_number() << std::endl;
-        std::cout << "darkest secret: " << this->_contacts[index].get_darkest_secret() << std::endl;
+        if (this->_contacts[index].get_first_name() != "")
+        {
+            std::cout << "last name: " << this->_contacts[index].get_last_name() << std::endl;
+            std::cout << "nickname: " << this->_contacts[index].get_nickname() << std::endl;
+            std::cout << "phone number: " << this->_contacts[index].get_phone_number() << std::endl;
+            std::cout << "darkest secret: " << this->_contacts[index].get_darkest_secret() << std::endl;
+        }
     }
     else
         std::cout << "Invalid index" << std::endl;

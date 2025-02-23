@@ -12,6 +12,7 @@
 
 #include "contact.hpp"
 #include "phonebook.hpp"
+#include "tools.hpp"
 
 static void add_contact(PhoneBook *book)
 {
@@ -22,27 +23,16 @@ static void add_contact(PhoneBook *book)
     std::string phone_number;
     std::string darkest_secret;
 
-    std::cout << "First name: ";
-    std::getline(std::cin, first_name);
-    if(std::cin.eof())
+    if(getInput(&first_name, "First name: ", 1) == -69)
         return;
-    std::cout << "Last name: ";
-    std::getline(std::cin, last_name);
-    if(std::cin.eof())
+    if(getInput(&last_name, "Last name: ", 1) == -69)
         return;
-    std::cout << "nickname: ";
-    std::getline(std::cin, nickname);
-    if(std::cin.eof())
+    if(getInput(&nickname, "Nickname: ", 1) == -69)
         return;
-    std::cout << "Phone number: ";
-    std::getline(std::cin, phone_number);
-    if(std::cin.eof())
+    if(getInput(&phone_number, "Phone number: ", 1) == -69)
         return;
-    std::cout << "Darkest secret: ";
-    std::getline(std::cin, darkest_secret);
-    if(std::cin.eof())
-    return;
-    std::cout << std::endl;
+    if(getInput(&darkest_secret, "Darkest secret: ", 1) == -69)
+        return;
     contact.set_first_name(first_name);
     contact.set_last_name(last_name);
     contact.set_nickname(nickname);
@@ -54,17 +44,16 @@ static void add_contact(PhoneBook *book)
 int main()
 {
     PhoneBook book;
-    std::string pr;
+    std::string line;
 
     while (1)
     {
-        std::cout << "$> ";
-        std::getline(std::cin, pr);
-        if (pr == "EXIT" || std::cin.eof())
+        getInput(&line, "----------$> ", 0);
+        if (line == "EXIT" || std::cin.eof())
             break;
-        else if (pr == "ADD")
+        else if (line == "ADD")
            add_contact(&book);
-        else if( pr == "SEARCH")
+        else if( line == "SEARCH")
             book.search_contact();
     }
     return 0;

@@ -16,7 +16,7 @@ CXX_FLAGS = -Wall -Wextra -Werror -std=c++98 -lreadline -fsanitize=address -g3
 
 NAME = phonebook
 
-SRC = phonebook.cpp contacts.cpp main.cpp
+SRC = phonebook.cpp contacts.cpp main.cpp tools.cpp
 
 all: $(NAME)
 

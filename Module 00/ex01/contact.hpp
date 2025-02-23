@@ -13,11 +13,7 @@
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 
-#include <iostream>
 #include <string>
-#include <iomanip>
-#include <readline/readline.h>
-#include <readline/history.h>
 
 class Contact
 {
