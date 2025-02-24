@@ -16,7 +16,7 @@
 #include "contact.hpp"
 class PhoneBook
 {
-	Contact _contacts[3];
+	Contact _contacts[8];
 	int _i;
 
 public:
