@@ -26,26 +26,26 @@ void PhoneBook::search_contact()
 {
     std::string input;
     int index;
-    std::cout << "     index|first name| last name|  nickname" << std::endl;
+    std::cout << "     index|first name| last name|  surnom" << std::endl;
     for (int i = 0; i < 8; i++)
-    {   if(this->_contacts[i].get_first_name() == "")
+    {   if(this->_contacts[i].get_prenom() == "")
             continue;
         std::cout << std::setw(10) << i << "|";
-        std::cout << std::setw(10) << this->_contacts[i].get_first_name().substr(0, 9) + "." << "|";
-        std::cout << std::setw(10) << this->_contacts[i].get_last_name().substr(0, 9) + "." << "|";
-        std::cout << std::setw(10) << this->_contacts[i].get_nickname().substr(0, 9) + "." << std::endl;
+        std::cout << std::setw(10) << this->_contacts[i].get_prenom().substr(0, 9) + "." << "|";
+        std::cout << std::setw(10) << this->_contacts[i].get_nom().substr(0, 9) + "." << "|";
+        std::cout << std::setw(10) << this->_contacts[i].get_surnom().substr(0, 9) + "." << std::endl;
     }
     if(getInput(&input, "Enter index: ", 1) == -69)
         return;
     if (input.length() == 1 && input[0] >= '0' && input[0] <= '7')
     {
         index = input[0] - '0';
-        if (this->_contacts[index].get_first_name() != "")
+        if (this->_contacts[index].get_prenom() != "")
         {
-            std::cout << "last name: " << this->_contacts[index].get_last_name() << std::endl;
-            std::cout << "nickname: " << this->_contacts[index].get_nickname() << std::endl;
-            std::cout << "phone number: " << this->_contacts[index].get_phone_number() << std::endl;
-            std::cout << "darkest secret: " << this->_contacts[index].get_darkest_secret() << std::endl;
+            std::cout << "last name: " << this->_contacts[index].get_nom() << std::endl;
+            std::cout << "surnom: " << this->_contacts[index].get_surnom() << std::endl;
+            std::cout << "phone number: " << this->_contacts[index].get_numero() << std::endl;
+            std::cout << "darkest secret: " << this->_contacts[index].get_secret() << std::endl;
         }
     }
     else

@@ -14,36 +14,36 @@
 #include "phonebook.hpp"
 #include "tools.hpp"
 
-static void add_contact(PhoneBook *book)
+static void add_contact(PhoneBook *repertoire)
 {
     Contact contact;
-    std::string first_name;
-    std::string last_name;
-    std::string nickname;
-    std::string phone_number;
-    std::string darkest_secret;
+    std::string prenom;
+    std::string nom;
+    std::string surnom;
+    std::string numero;
+    std::string secret;
 
-    if(getInput(&first_name, "First name: ", 1) == -69)
+    if(getInput(&prenom, "Prénom: ", 1) == -69)
         return;
-    if(getInput(&last_name, "Last name: ", 1) == -69)
+    if(getInput(&nom, "Nom de famille: ", 1) == -69)
         return;
-    if(getInput(&nickname, "Nickname: ", 1) == -69)
+    if(getInput(&surnom, "Surnom: ", 1) == -69)
         return;
-    if(getInput(&phone_number, "Phone number: ", 1) == -69)
+    if(getInput(&numero, "Numéro de télé: ", 1) == -69)
         return;
-    if(getInput(&darkest_secret, "Darkest secret: ", 1) == -69)
+    if(getInput(&secret, "Ton lourd secret: ", 1) == -69)
         return;
-    contact.set_first_name(first_name);
-    contact.set_last_name(last_name);
-    contact.set_nickname(nickname);
-    contact.set_phone_number(phone_number);
-    contact.set_darkest_secret(darkest_secret);
-    book->add_contact(contact);
+    contact.set_prenom(prenom);
+    contact.set_nom(nom);
+    contact.set_surnom(surnom);
+    contact.set_numero(numero);
+    contact.set_secret(secret);
+    repertoire->add_contact(contact);
 }
 
 int main()
 {
-    PhoneBook book;
+    PhoneBook repertoire;
     std::string line;
 
     while (1)
@@ -52,9 +52,9 @@ int main()
         if (line == "EXIT" || std::cin.eof())
             break;
         else if (line == "ADD")
-           add_contact(&book);
+           add_contact(&repertoire);
         else if( line == "SEARCH")
-            book.search_contact();
+            repertoire.search_contact();
     }
     return 0;
 }
