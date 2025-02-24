@@ -15,15 +15,11 @@
 
 #include <string>
 
-class Contact
-{
-    std::string prenom;
-    std::string nom;
-    std::string surnom;
-    std::string numero;
-    std::string secret;
+class Contact {
+
 
 public:
+
     void set_prenom(std::string prenom);
     void set_nom(std::string nom);
     void set_surnom(std::string surnom);
@@ -34,6 +30,15 @@ public:
     std::string get_surnom();
     std::string get_numero();
     std::string get_secret();
+
+private:
+
+    std::string _prenom;
+    std::string _nom;
+    std::string _surnom;
+    std::string _numero;
+    std::string _secret;
+
 };
 
 #endif

@@ -15,6 +15,7 @@
 
 void PhoneBook::add_contact(Contact contact)
 {
+    std::cout << "index is " << _i << std::endl;
     if (this->_i < 8)
     {
         this->_contacts[this->_i] = contact;

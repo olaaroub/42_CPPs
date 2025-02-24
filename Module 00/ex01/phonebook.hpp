@@ -14,15 +14,21 @@
 #define PHONEBOOK_HPP
 
 #include "contact.hpp"
-class PhoneBook
-{
-	Contact _contacts[8];
-	int _i;
+class PhoneBook {
+
 
 public:
+
 	void add_contact(Contact contact);
 	void    search_contact();
 	PhoneBook(){_i = 0;}
+
+
+private:
+
+	Contact _contacts[8];
+	int _i;
+
 };
 
 #endif
