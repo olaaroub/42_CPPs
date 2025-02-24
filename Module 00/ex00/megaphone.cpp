@@ -14,13 +14,11 @@
 
 int main(int ac, char **av)
 {
-    if (ac < 2)
-    {
+    if (ac < 2){
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
         return (0);
     }
-    while(*++av)
-    {
+    while(*++av){
         std::string str = *av;
         for (size_t i = 0; i < str.length(); i++)
             std::cout << (char)toupper(str[i]) << std::flush;
