@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/10 23:50:55 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/03/15 01:31:04 by olaaroub         ###   ########.fr       */
+/*   Created: 2025/03/15 01:44:59 by olaaroub          #+#    #+#             */
+/*   Updated: 2025/03/15 02:37:51 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ private:
 
 public:
     Zombie();
+    void setName(std::string name);
     void    announce( void );
-    Zombie* newZombie(std::string name);
-    void randomChump(std::string name);
+    Zombie* zombiHorde(int N, std::string name);
     Zombie(std::string name);
     ~Zombie();
 };

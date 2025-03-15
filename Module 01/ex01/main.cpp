@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/10 23:50:55 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/03/15 01:31:04 by olaaroub         ###   ########.fr       */
+/*   Created: 2025/03/15 01:50:57 by olaaroub          #+#    #+#             */
+/*   Updated: 2025/03/15 02:39:39 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+#include "Zombie.hpp"
 
-#include <string>
-#include <iostream>
+int main(){
 
-class Zombie {
-
-private:
-    std::string _name;
-
-public:
-    Zombie();
-    void    announce( void );
-    Zombie* newZombie(std::string name);
-    void randomChump(std::string name);
-    Zombie(std::string name);
-    ~Zombie();
-};
+    Zombie zombie;
+    Zombie *all ;
 
 
-#endif
+    std::cout << "-------------------" << std::endl;
+
+    zombie.announce();
+
+    std::cout << "-------------------" << std::endl;
+
+    all = zombie.zombiHorde(3, "Zombie from Heap");
+    for (int i = 0; i < 3; i++)
+        all[i].announce();
+
+    std::cout << "-------------------" << std::endl;
+
+
+    delete[] all;
+}
