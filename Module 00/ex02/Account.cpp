@@ -57,7 +57,7 @@ void Account::_displayTimestamp() {
     time_t now = time(NULL);
     tm *ltm = localtime(&now);
     std::cout << "[" << 1900 + ltm->tm_year
-              << 1 + ltm->tm_mon
+               << 1 + ltm->tm_mon
               << ltm->tm_mday << "_"
               <<  ltm->tm_hour
               <<  ltm->tm_min
