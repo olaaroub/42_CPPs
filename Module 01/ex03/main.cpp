@@ -6,49 +6,31 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 00:54:13 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/03/18 04:06:14 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/03/18 05:48:55 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Weapon.hpp"
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
-
-// int main(){
-//     Weapon ak("AK 47");
-//     Weapon shot = Weapon("shotgun");
-//     HumanA oussama("Oussama", ak);
-//     HumanB Laaroubi("laaroubi");
-
-//     Laaroubi.attack();
-//     Laaroubi.setWeapon(&shot);
-//     oussama.attack();
-//     Laaroubi.attack();
-//     shot.setType("another one");
-//     Laaroubi.attack();
-
-//     return 0;
-// }
-
 int main()
 {
     {
-        Weapon club = Weapon("crude spiked club");
-        HumanA bob("Bob", club);
-        bob.attack();
-        club.setType("some other type of club");
-        bob.attack();
+        Weapon gun = Weapon("Reaver Vandal");
+        HumanA Oussama("Oussama", gun);
+        Oussama.attack();
+        gun.setType("Prime 2.0 Phantom");
+        Oussama.attack();
     }
 
     {
-        Weapon club = Weapon("crude spiked club");
-        HumanB jim("Jim");
-        jim.setWeapon(club);
-        jim.attack();
-        club.setType("some other type of club");
-        jim.attack();
+        Weapon gun = Weapon("Origin Operator");
+        HumanB Zakaria("Zakaria");
+        Zakaria.setWeapon(gun);
+        Zakaria.attack();
+        gun.setType("RGX Outlaw");
+        Zakaria.attack();
     }
     return 0;
 }

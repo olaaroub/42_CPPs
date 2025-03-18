@@ -3,7 +3,7 @@ CXX = c++
 CXX_FLAGS = -std=c++98 -Wall -Wextra -Werror
 CXX_FLAGS += -fsanitize=address -g3
 
-NAME = Ref
+NAME = Valorant
 
 SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
