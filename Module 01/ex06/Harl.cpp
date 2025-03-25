@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 21:44:49 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/03/24 02:52:52 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/03/25 02:19:48 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,8 @@ void Harl::complain(std::string level){
     for (int i = 0; i < 4; i++)
     {
         if (levels[i] == level){
-            for(; i < 4; i++){
-                (this->*pointerToMF[i])();
-                std::cout << std::endl;
-            }
+            (this->*pointerToMF[i])();
+            std::cout << std::endl;
             return;
         }
     }

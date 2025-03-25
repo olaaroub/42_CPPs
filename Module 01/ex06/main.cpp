@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 21:36:58 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/03/24 03:28:35 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/03/25 02:26:33 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,25 @@ int getKey(std::string input){
     return 0;
 }
 
+void switchOff(int key){
+    Harl flan;
+    switch (key)
+    {
+        case 1:
+           flan.complain("DEBUG");
+        case 2:
+           flan.complain("INFO");
+        case 3:
+           flan.complain("WARNING");
+        case 4:
+           flan.complain("ERROR");
+            break;
+        default:
+           std::cerr << "[ Probably complaining about insignficant problems ]"
+             << std::endl;
+    }
+}
+
 int main(int ac, char **av){
 
     if(2 != ac || !av[1][0]){
@@ -31,24 +50,6 @@ int main(int ac, char **av){
         return 1;
     }
     const int key = getKey(av[1]);
-
-    switch (key)
-    {
-        case 1:
-            Harl().complain("DEBUG");
-            break;
-        case 2:
-            Harl().complain("INFO");
-            break;
-        case 3:
-            Harl().complain("WARNING");
-            break;
-        case 4:
-            Harl().complain("ERROR");
-            break;
-        default:
-           std::cerr << "[ Probably complaining about insignficant problems ]"
-             << std::endl;
-    }
+    switchOff(key);
     return 0;
 }

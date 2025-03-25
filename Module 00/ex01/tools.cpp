@@ -28,7 +28,7 @@ int getInput(std::string *line, std::string message, int flag){
         std::cout << message;
         std::getline(std::cin, test);
         if (std::cin.eof() && flag == 0)
-            exit(0);
+            std::exit(0);
         else if (std::cin.eof() && flag == 1)
             return -69;
     }
