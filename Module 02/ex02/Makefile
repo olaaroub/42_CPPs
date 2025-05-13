@@ -3,7 +3,7 @@ CXX = c++
 CXX_FLAGS = -std=c++98 -Wall -Wextra -Werror
 CXX_FLAGS += -fsanitize=address -g3
 
-NAME = PROG01
+NAME = PROG03
 
 SRC = main.cpp  Fixed.cpp
 
