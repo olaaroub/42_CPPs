@@ -1,11 +1,11 @@
 CXX = c++
 
-CXX_FLAGS = -std=c++98 -Wall -Wextra -Werror
-CXX_FLAGS += -fsanitize=address -g3
+CXX_FLAGS = -Wall -Wextra -Werror -std=c++98
+CXX_FLAGS += #-fsanitize=address -g3
 
 NAME = PROG03
 
-SRC = main.cpp  Fixed.cpp
+SRC = Fixed.cpp main.cpp
 
 all: $(NAME)
 
