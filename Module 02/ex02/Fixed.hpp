@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 21:51:17 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/04 20:34:17 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/14 18:25:52 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,10 @@ public:
     Fixed& operator--(); // Pre-decrement
     Fixed operator--(int); // Post-decrement
 
+    static Fixed& min(Fixed& fixedPointOne, Fixed& fixedPointTwo);
+    static const Fixed& min(const Fixed& fixedPointOne,const Fixed& fixedPointTwo);
+    static Fixed& max(Fixed& fixedPointOne, Fixed& fixedPointTwo);
+    static const Fixed& max(const Fixed& fixedPointOne,const Fixed& fixedPointTwo);
 
 };
 
