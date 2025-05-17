@@ -3,7 +3,7 @@ CXX = c++
 CXX_FLAGS = -Wall -Wextra -Werror -std=c++98
 CXX_FLAGS += #-fsanitize=address -g3
 
-NAME = PROG02
+NAME = BSP
 
 SRC = Fixed.cpp main.cpp
 

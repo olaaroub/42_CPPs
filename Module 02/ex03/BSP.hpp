@@ -1,28 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   BSP.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/03 12:24:48 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/17 18:22:46 by olaaroub         ###   ########.fr       */
+/*   Created: 2025/05/17 18:27:10 by olaaroub          #+#    #+#             */
+/*   Updated: 2025/05/17 21:28:37 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef BSP_HPP
+# define BSP_HPP
 
 #include "Fixed.hpp"
 
 
-int main()
+class Point
 {
-    Fixed a;
-    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << Fixed::max( a, b ) << std::endl;
-    return 0;
-}
+private:
+    Fixed const _x;
+    Fixed const _y;
+public:
+    Point();
+    ~Point();
+
+    Point(const float xVal, const float yVal);
+    Point(const Point &obj);
+
+    Point& operator=(const Point &obj);
+
+    Fixed getX();
+    Fixed getY();
+
+};
+
+
+bool bsp(Point const a, Point b, Point const c, Point const point);
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
