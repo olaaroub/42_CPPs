@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 20:55:12 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/17 21:28:29 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/17 21:50:15 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,17 @@ Point& Point::operator=(const Point &obj){
 }
 
 
-Fixed Point::getX(){
+Fixed Point::getX() const {
     return _x;
 }
 
-Fixed Point::getY(){
+Fixed Point::getY() const {
     return _y;
 }
 
+bool  bsp(Point const a, Point const b, Point const c, Point const point){
 
+    Fixed area = a.getX() * (b.getY() - c.getY())
+                + b.getX() * (c.getY() - a.getY())
+                + c.getX() * (a.getY() - b.getY())
+}

@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 18:27:10 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/17 21:28:37 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/17 21:48:12 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ public:
 
     Point& operator=(const Point &obj);
 
-    Fixed getX();
-    Fixed getY();
+    Fixed getX() const ;
+    Fixed getY() const ;
 
 };
 
