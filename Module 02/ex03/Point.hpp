@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   BSP.hpp                                            :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 18:27:10 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/17 21:48:12 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/20 16:25:01 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BSP_HPP
-# define BSP_HPP
+#ifndef POINT_HPP
+# define POINT_HPP
 
 #include "Fixed.hpp"
 
@@ -25,7 +25,7 @@ public:
     Point();
     ~Point();
 
-    Point(const float xVal, const float yVal);
+    Point(const float x, const float y);
     Point(const Point &obj);
 
     Point& operator=(const Point &obj);
@@ -35,18 +35,7 @@ public:
 
 };
 
-
 bool bsp(Point const a, Point b, Point const c, Point const point);
-
-
-
-
-
-
-
-
-
-
 
 
 #endif

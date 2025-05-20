@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 21:51:17 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/14 19:00:35 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/20 14:56:46 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,10 @@ private:
 
 public:
     Fixed();
-    ~Fixed();
-
     Fixed(const int intValue);
     Fixed(const float floatValue);
     Fixed(const Fixed &obj);
+    ~Fixed();
 
     int getRawBits(void) const;
     void setRawBits(int const raw);

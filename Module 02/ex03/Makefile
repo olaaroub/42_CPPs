@@ -5,7 +5,7 @@ CXX_FLAGS += #-fsanitize=address -g3
 
 NAME = BSP
 
-SRC = Fixed.cpp main.cpp
+SRC = Fixed.cpp main.cpp Point.cpp bsp.cpp
 
 all: $(NAME)
 
