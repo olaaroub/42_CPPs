@@ -6,28 +6,28 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 14:33:36 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/02/22 20:10:37 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/21 16:28:41 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "contact.hpp"
 
-void Contact::set_prenom(std::string prenom){this->_prenom = prenom;}
+void Contact::setFirstName(std::string prenom){this->_lastName = prenom;}
 
-void Contact::set_nom(std::string nom){this->_nom = nom;}
+void Contact::setlastName(std::string nom){this->_name = nom;}
 
-void Contact::set_surnom(std::string surnom){this->_surnom = surnom;}
+void Contact::setNickName(std::string surnom){this->_nickName = surnom;}
 
-void Contact::set_numero(std::string numero){this->_numero = numero;}
+void Contact::setPhoneNum(std::string numero){this->_phoneNum = numero;}
 
-void Contact::set_secret(std::string secret){this->_secret = secret;}
+void Contact::setSecret(std::string secret){this->_secret = secret;}
 
-std::string Contact::get_prenom(){return this->_prenom;}
+std::string Contact::getFirstName(){return this->_lastName;}
 
-std::string Contact::get_nom(){return this->_nom;}
+std::string Contact::getlastName(){return this->_name;}
 
-std::string Contact::get_surnom(){return this->_surnom;}
+std::string Contact::getNickName(){return this->_nickName;}
 
-std::string Contact::get_numero(){return this->_numero;}
+std::string Contact::getPhoneNum(){return this->_phoneNum;}
 
-std::string Contact::get_secret(){return this->_secret;}
+std::string Contact::getSecret(){return this->_secret;}

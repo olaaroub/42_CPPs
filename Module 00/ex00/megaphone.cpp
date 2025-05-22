@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 16:40:41 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/02/22 11:31:49 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/22 16:04:44 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(int ac, char **av)
     while(*++av){
         std::string str = *av;
         for (size_t i = 0; i < str.length(); i++)
-            std::cout << (char)toupper(str[i]) << std::flush;
+            std::cout << (char)toupper(str[i]);
     }
     std::cout << std::endl;
 }

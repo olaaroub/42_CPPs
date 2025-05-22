@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   tools.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/21 16:33:42 by olaaroub          #+#    #+#             */
+/*   Updated: 2025/05/22 22:55:16 by olaaroub         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef TOOLS_HPP
 #define TOOLS_HPP
 
@@ -9,6 +21,7 @@
 bool isWhiteSpaces(std::string line);
 bool isNonPrint(std::string line);
 int getInput(std::string *line, std::string message, int flag);
+std::string formatField(const std::string* field);
 
 
 #endif

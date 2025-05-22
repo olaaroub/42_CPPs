@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 14:35:48 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/02/22 18:28:50 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/21 16:28:05 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,23 @@ class Contact {
 
 public:
 
-    void set_prenom(std::string prenom);
-    void set_nom(std::string nom);
-    void set_surnom(std::string surnom);
-    void set_numero(std::string numero);
-    void set_secret(std::string secret);
-    std::string get_prenom();
-    std::string get_nom();
-    std::string get_surnom();
-    std::string get_numero();
-    std::string get_secret();
+    void setFirstName(std::string prenom);
+    void setlastName(std::string nom);
+    void setNickName(std::string surnom);
+    void setPhoneNum(std::string numero);
+    void setSecret(std::string secret);
+    std::string getFirstName();
+    std::string getlastName();
+    std::string getNickName();
+    std::string getPhoneNum();
+    std::string getSecret();
 
 private:
 
-    std::string _prenom;
-    std::string _nom;
-    std::string _surnom;
-    std::string _numero;
+    std::string _lastName;
+    std::string _name;
+    std::string _nickName;
+    std::string _phoneNum;
     std::string _secret;
 
 };

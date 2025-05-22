@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 18:22:52 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/02/22 21:44:25 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/22 22:40:39 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,38 @@
 #include "phonebook.hpp"
 #include "tools.hpp"
 
+static void printHelp(void){
+    std::cout << "Available commands:" << std::endl;
+    std::cout << "ADD: Add a new contact" << std::endl;
+    std::cout << "SEARCH: Search for a contact" << std::endl;
+    std::cout << "EXIT: Exit the program" << std::endl;
+
+}
+
 static void add_contact(PhoneBook *repertoire)
 {
     Contact contact;
-    std::string prenom;
-    std::string nom;
-    std::string surnom;
-    std::string numero;
+    std::string lastName;
+    std::string name;
+    std::string nickName;
+    std::string phoneNum;
     std::string secret;
 
-    if(getInput(&prenom, "Prénom: ", 1) == -69)
+    if(getInput(&name, "Name: ", 1) == -69)
         return;
-    if(getInput(&nom, "Nom de famille: ", 1) == -69)
+    if(getInput(&lastName, "Last Name: ", 1) == -69)
         return;
-    if(getInput(&surnom, "Surnom: ", 1) == -69)
+    if(getInput(&nickName, "Nickname: ", 1) == -69)
         return;
-    if(getInput(&numero, "Numéro de télé: ", 1) == -69)
+    if(getInput(&phoneNum, "Phone number: ", 1) == -69)
         return;
-    if(getInput(&secret, "Ton lourd secret: ", 1) == -69)
+    if(getInput(&secret, "Your darkest secret: ", 1) == -69)
         return;
-    contact.set_prenom(prenom);
-    contact.set_nom(nom);
-    contact.set_surnom(surnom);
-    contact.set_numero(numero);
-    contact.set_secret(secret);
+    contact.setFirstName(name);
+    contact.setlastName(lastName);
+    contact.setNickName(nickName);
+    contact.setPhoneNum(phoneNum);
+    contact.setSecret(secret);
     repertoire->add_contact(contact);
 }
 
@@ -46,9 +54,10 @@ int main()
     PhoneBook repertoire;
     std::string line;
 
+    printHelp();
     while (1)
     {
-        getInput(&line, "----------$> ", 0);
+        getInput(&line, "=> ", 0);
         if (line == "EXIT" || std::cin.eof())
             break;
         else if (line == "ADD")

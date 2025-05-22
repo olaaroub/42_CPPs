@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   tools.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/21 16:33:38 by olaaroub          #+#    #+#             */
+/*   Updated: 2025/05/22 22:57:48 by olaaroub         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "phonebook.hpp"
 #include "contact.hpp"
 #include "tools.hpp"
@@ -34,4 +46,10 @@ int getInput(std::string *line, std::string message, int flag){
     }
     *line = test;
     return 0;
+}
+
+std::string formatField(const std::string* field) {
+    if (field->length() > 10)
+        return field->substr(0, 9) + ".";
+    return std::string(10 - field->length(), ' ') + *field;  // pad left with spaces
 }
