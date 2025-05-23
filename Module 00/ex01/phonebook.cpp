@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 19:16:18 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/22 22:52:28 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/23 12:04:25 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,18 @@ void PhoneBook::search_contact()
     std::string input;
     int index;
 
+    if(this->_contacts[0].getFirstName() == ""){
+        std::cout << "Your Phonebook is empty" << std::endl;
+        return;
+    }
     std::cout << "     index|first name| last name|  nickname" << std::endl;
     for (int i = 0; i < 8; i++){
        if(this->_contacts[i].getFirstName() == "")
             continue;
         std::cout << std::setw(10) << i + 1 << "|";
-        std::cout << std::setw(10) << this->_contacts[i].getFirstName().substr(0, 9) + "." << "|";
-        std::cout << std::setw(10) << this->_contacts[i].getlastName().substr(0, 9) + "." << "|";
-        std::cout << std::setw(10) << this->_contacts[i].getNickName().substr(0, 9) + "." << std::endl;
+        std::cout << formatField(this->_contacts[i].getFirstName()) << "|";
+        std::cout << formatField(this->_contacts[i].getlastName()) << "|";
+        std::cout << formatField(this->_contacts[i].getNickName()) << std::endl;
     }
     if(getInput(&input, "Enter index: ", 1) == -69)
         return;

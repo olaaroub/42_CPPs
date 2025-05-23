@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 16:33:42 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/22 22:55:16 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/23 12:05:02 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 bool isWhiteSpaces(std::string line);
 bool isNonPrint(std::string line);
 int getInput(std::string *line, std::string message, int flag);
-std::string formatField(const std::string* field);
+std::string formatField(const std::string& field);
 
 
 #endif

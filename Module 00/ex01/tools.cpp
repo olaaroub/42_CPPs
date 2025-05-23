@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 16:33:38 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/22 22:57:48 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/23 12:01:25 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ int getInput(std::string *line, std::string message, int flag){
     return 0;
 }
 
-std::string formatField(const std::string* field) {
-    if (field->length() > 10)
-        return field->substr(0, 9) + ".";
-    return std::string(10 - field->length(), ' ') + *field;  // pad left with spaces
+std::string formatField(const std::string& field) {
+    if (field.length() > 10)
+        return field.substr(0, 9) + ".";
+    return std::string(10 - field.length(), ' ') + field;  // pad left with spaces
 }
