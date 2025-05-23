@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 20:52:14 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/03/22 05:53:22 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/23 22:35:08 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main(int ac, char **av){
 
     std::ofstream outputFile(fileName.append(".replace").c_str());
     if(!outputFile)
-        return(throwError("Could not creat output file", 1));
+        return(throwError("Could not create output file", 1));
 
     std::string line;
     while(std::getline(inputFile, line)){

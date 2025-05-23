@@ -1,21 +1,26 @@
+
+
 CXX = c++
 
-CXX_FLAGS = -std=c++98 -Wall -Wextra -Werror
+CXX_FLAGS = -Wall -Wextra -Werror -std=c++98
 CXX_FLAGS += -fsanitize=address -g3
 
-NAME = Valorant
+NAME = phonebook
 
 SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(SRC)
-	$(CXX) $(CXX_FLAGS) $(SRC) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CXX) $(CXX_FLAGS) $(OBJ) -o $(NAME)
 
 clean:
+	rm -f $(OBJ)
 
 fclean:
-	rm -f $(NAME)
+	rm -f $(NAME) $(OBJ)
 
 re: fclean all
 .PHONY: all clean fclean re
+.SECONDARY: $(OBJ)

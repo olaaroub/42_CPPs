@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 01:18:59 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/03/15 01:20:24 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/23 22:16:40 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void Zombie::randomChump(std::string name){
 
-    Zombie newZombie(name);
-    newZombie.announce();
+    Zombie Z(name);
+    Z.announce();
 }
