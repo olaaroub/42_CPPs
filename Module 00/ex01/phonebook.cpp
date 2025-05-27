@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 19:16:18 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/26 21:19:39 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/27 21:46:22 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 void PhoneBook::add_contact(Contact contact)
 {
-    std::cout << "index is " << _i + 1 << std::endl;
     if (this->_i < 8)
     {
         this->_contacts[this->_i] = contact;
@@ -23,7 +22,7 @@ void PhoneBook::add_contact(Contact contact)
         if (_i == 8){_i = 0;}
     }
 }
-void PhoneBook::search_contact() 
+void PhoneBook::search_contact()
 {
     std::string input;
     int index;
@@ -32,14 +31,14 @@ void PhoneBook::search_contact()
         std::cout << "Your Phonebook is empty" << std::endl;
         return;
     }
-    std::cout << "     index|first name| last name|  nickname" << std::endl;
+    std::cout << "|     index|first name| last name|  nickname|" << std::endl;
     for (int i = 0; i < 8; i++){
-       if(this->_contacts[i].getFirstName() == "")
+        if (this->_contacts[i].getFirstName() == "")
             continue;
-        std::cout << std::setw(10) << i + 1 << "|";
+        std::cout << "|" << std::setw(10) << i + 1 << "|";
         std::cout << formatField(this->_contacts[i].getFirstName()) << "|";
         std::cout << formatField(this->_contacts[i].getlastName()) << "|";
-        std::cout << formatField(this->_contacts[i].getNickName()) << std::endl;
+        std::cout << formatField(this->_contacts[i].getNickName()) << "|" << std::endl;
     }
     if(getInput(&input, "Enter index: ", 1) == -69)
         return;
@@ -48,10 +47,10 @@ void PhoneBook::search_contact()
         index = input[0] - '0';
         if (this->_contacts[index - 1 ].getFirstName() != "")
         {
-            std::cout << "last name: " << this->_contacts[index].getlastName() << std::endl;
-            std::cout << "nickname: " << this->_contacts[index].getNickName() << std::endl;
-            std::cout << "phone number: " << this->_contacts[index].getPhoneNum() << std::endl;
-            std::cout << "darkest secret: " << this->_contacts[index].getSecret() << std::endl;
+            std::cout << "last name: " << this->_contacts[index - 1].getlastName() << std::endl;
+            std::cout << "nickname: " << this->_contacts[index - 1].getNickName() << std::endl;
+            std::cout << "phone number: " << this->_contacts[index - 1].getPhoneNum() << std::endl;
+            std::cout << "darkest secret: " << this->_contacts[index - 1].getSecret() << std::endl;
         }
     }
     else

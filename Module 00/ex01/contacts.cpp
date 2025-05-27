@@ -6,19 +6,19 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 14:33:36 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/26 21:20:16 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/27 19:08:27 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "contact.hpp"
 
-void Contact::setFirstName(std::string prenom){this->_lastName = prenom;}
+void Contact::setFirstName(std::string lastName){this->_lastName = lastName;}
 
-void Contact::setlastName(std::string nom){this->_name = nom;}
+void Contact::setlastName(std::string firstName){this->_name = firstName;}
 
-void Contact::setNickName(std::string surnom){this->_nickName = surnom;}
+void Contact::setNickName(std::string nickName){this->_nickName = nickName;}
 
-void Contact::setPhoneNum(std::string numero){this->_phoneNum = numero;}
+void Contact::setPhoneNum(std::string phoneNum){this->_phoneNum = phoneNum;}
 
 void Contact::setSecret(std::string secret){this->_secret = secret;}
 
