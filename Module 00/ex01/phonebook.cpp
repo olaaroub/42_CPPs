@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 19:16:18 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/23 12:04:25 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/26 21:19:39 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void PhoneBook::add_contact(Contact contact)
         if (_i == 8){_i = 0;}
     }
 }
-void PhoneBook::search_contact()
+void PhoneBook::search_contact() 
 {
     std::string input;
     int index;

@@ -1,25 +1,25 @@
-
 CXX = c++
-
-CXX_FLAGS = -Wall -Wextra -Werror -std=c++98
-CXX_FLAGS += -fsanitize=address -g3
-
-NAME = phonebook
-
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS += -fsanitize=address -g3
+NAME = zombie
 SRC = newZombie.cpp randomChump.cpp Zombie.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXX_FLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)  # Now uses CXXFLAGS
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)
 
-fclean:
-	rm -f $(NAME) $(OBJ)
+fclean: clean
+	rm -f $(NAME)
 
 re: fclean all
+
 .PHONY: all clean fclean re
 .SECONDARY: $(OBJ)

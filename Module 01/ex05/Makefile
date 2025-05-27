@@ -1,21 +1,25 @@
 CXX = c++
-
-CXX_FLAGS = -std=c++98 -Wall -Wextra -Werror
-CXX_FLAGS += -fsanitize=address -g3
-
-NAME = Harl
-
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS += -fsanitize=address -g3
+NAME = harl
 SRC = main.cpp  Harl.cpp
+OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(SRC)
-	$(CXX) $(CXX_FLAGS) $(SRC) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)  # Now uses CXXFLAGS
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
+	rm -f $(OBJ)
 
-fclean:
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
 .PHONY: all clean fclean re
+.SECONDARY: $(OBJ)

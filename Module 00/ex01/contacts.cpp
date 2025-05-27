@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 14:33:36 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/21 16:28:41 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/26 21:20:16 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ void Contact::setPhoneNum(std::string numero){this->_phoneNum = numero;}
 
 void Contact::setSecret(std::string secret){this->_secret = secret;}
 
-std::string Contact::getFirstName(){return this->_lastName;}
+std::string Contact::getFirstName() const {return this->_lastName;}
 
-std::string Contact::getlastName(){return this->_name;}
+std::string Contact::getlastName() const {return this->_name;}
 
-std::string Contact::getNickName(){return this->_nickName;}
+std::string Contact::getNickName() const {return this->_nickName;}
 
-std::string Contact::getPhoneNum(){return this->_phoneNum;}
+std::string Contact::getPhoneNum() const {return this->_phoneNum;}
 
-std::string Contact::getSecret(){return this->_secret;}
+std::string Contact::getSecret() const {return this->_secret;}

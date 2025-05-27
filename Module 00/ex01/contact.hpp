@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 14:35:48 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/21 16:28:05 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/26 21:20:33 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ public:
     void setNickName(std::string surnom);
     void setPhoneNum(std::string numero);
     void setSecret(std::string secret);
-    std::string getFirstName();
-    std::string getlastName();
-    std::string getNickName();
-    std::string getPhoneNum();
-    std::string getSecret();
+    std::string getFirstName() const;
+    std::string getlastName() const;
+    std::string getNickName() const;
+    std::string getPhoneNum() const;
+    std::string getSecret() const;
 
 private:
 
