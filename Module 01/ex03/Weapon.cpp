@@ -6,14 +6,16 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 01:00:51 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/03/18 01:09:33 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/29 15:25:43 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
+Weapon::Weapon(){}
+
 Weapon::Weapon(std::string type): _type(type){
-    std::cout << "Weapon: " << type << " is Created" << std::endl;
+    // std::cout << "Weapon: " << type << " is Created" << std::endl;
 }
 
 const std::string& Weapon::getType() const{
@@ -25,6 +27,6 @@ void    Weapon::setType(std::string type){
 }
 
 Weapon::~Weapon(){
-    std::cout << "Weapon: " << this->_type << " is Destroyed" << std::endl;
+    // std::cout << "Weapon: " << this->_type << " is Destroyed" << std::endl;
 }
 

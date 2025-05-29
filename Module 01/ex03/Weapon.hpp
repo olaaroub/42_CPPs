@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 00:54:48 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/03/18 03:09:40 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/29 15:23:58 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ private:
     std::string _type;
 
 public:
-
+    Weapon();
     Weapon(std::string type);
     const std::string&    getType() const;
     void            setType(std::string type);

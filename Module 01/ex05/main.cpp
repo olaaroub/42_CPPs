@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 21:36:58 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/03/23 00:04:25 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/29 15:55:15 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 int main(){
 
-    Harl t;
-    t.complain("DEBUG");
+    Harl obj;
+    std::string level;
+
+    std::cout << "Enter a level: ";
+    std::cin >> level;
+    obj.complain(level);
 }

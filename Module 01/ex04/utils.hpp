@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 02:56:46 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/03/22 05:53:00 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/29 15:37:04 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include <sstream>
 
 int    throwError(std::string message, int exitCode);
-int     replaceOccurences(std::string& line, std::string s1, std::string s2);
+void     replaceOccurences(std::string& line, std::string s1, std::string s2);
 
 
 

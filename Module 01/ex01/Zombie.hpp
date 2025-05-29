@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 01:44:59 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/03/15 02:37:51 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/29 12:00:50 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,13 @@ private:
 
 public:
     Zombie();
-    void setName(std::string name);
-    void    announce( void );
-    Zombie* zombiHorde(int N, std::string name);
     Zombie(std::string name);
+    void    announce( void ) const;
+    void setName(std::string name);
     ~Zombie();
 };
+
+Zombie* zombieHorde(int N, std::string name);
 
 
 #endif

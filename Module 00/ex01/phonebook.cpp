@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 19:16:18 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/27 21:46:22 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/29 11:36:23 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void PhoneBook::search_contact()
         index = input[0] - '0';
         if (this->_contacts[index - 1 ].getFirstName() != "")
         {
+            std::cout << "first name: " << this->_contacts[index - 1].getFirstName() << std::endl;
             std::cout << "last name: " << this->_contacts[index - 1].getlastName() << std::endl;
             std::cout << "nickname: " << this->_contacts[index - 1].getNickName() << std::endl;
             std::cout << "phone number: " << this->_contacts[index - 1].getPhoneNum() << std::endl;

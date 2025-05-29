@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 20:52:14 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/23 22:35:08 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/29 15:46:03 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 int main(int ac, char **av){
 
-    if(ac != 4 || !*av[1] || !*av[2] || !*av[3])
-        throwError("Invalid Arguments", 1);
+    if(ac != 4 || !av[1] || !av[2] || !av[3] || !*av[1] || !*av[2])
+        return(throwError("Invalid Arguments", 1));
 
     std::string fileName = av[1];
     std::string s1 = av[2];
@@ -32,8 +32,7 @@ int main(int ac, char **av){
 
     std::string line;
     while(std::getline(inputFile, line)){
-        if(replaceOccurences(line, s1, s2) == -69)
-            return (throwError("Error while reading the file", 1));
+        replaceOccurences(line, s1, s2);
         outputFile << line;
         if(!inputFile.eof())
             outputFile << std::endl;

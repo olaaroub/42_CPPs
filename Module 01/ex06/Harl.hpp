@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 21:37:28 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/03/25 02:26:57 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/29 16:02:23 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ private:
     void error(void);
 
 public:
-
+    Harl();
+    ~Harl();
     void complain(std::string level);
 
 };

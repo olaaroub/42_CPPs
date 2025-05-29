@@ -1,4 +1,3 @@
-NAME	:=	Harl
 
 CC		:=	c++
 FLAGS	:=	-Wall -Wextra -Werror #-fsanitize=address
@@ -9,9 +8,10 @@ INCS	:=	Harl.hpp
 
 OBJS	:=	$(SRCS:.cpp=.o)
 
-%.o:%.c 
+%.o:%.c
 	$(CC) -I $(INCS) -c $< -o $@
 
+NAME	=	Harl
 all:		$(NAME)
 
 $(NAME): $(INCS) $(OBJS)

@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 01:50:57 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/03/15 02:39:39 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/29 12:02:18 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,17 @@
 
 int main(){
 
-    Zombie zombie;
-    Zombie *all ;
+    Zombie *zombieSworm = zombieHorde(5, "Walking Dead");
+
+    std::cout << "====================================" << std::endl;
+
+    for (int i = 0; i < 5; i++){
+        zombieSworm[i].announce();
+    }
+
+    std::cout << "====================================" << std::endl;
 
 
-    std::cout << "-------------------" << std::endl;
-
-    zombie.announce();
-
-    std::cout << "-------------------" << std::endl;
-
-    all = zombie.zombiHorde(3, "Zombie from Heap");
-    for (int i = 0; i < 3; i++)
-        all[i].announce();
-
-    std::cout << "-------------------" << std::endl;
-
-
-    delete[] all;
+    delete[] zombieSworm;
+    return 0;
 }

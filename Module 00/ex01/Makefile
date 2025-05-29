@@ -6,12 +6,12 @@
 #    By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/04 19:16:00 by olaaroub          #+#    #+#              #
-#    Updated: 2025/05/26 20:28:47 by olaaroub         ###   ########.fr        #
+#    Updated: 2025/05/29 11:35:36 by olaaroub         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = phonebook
 SRC = phonebook.cpp contacts.cpp main.cpp tools.cpp
 OBJ = $(SRC:.cpp=.o)
@@ -19,7 +19,7 @@ OBJ = $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)  # Now uses CXXFLAGS
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@

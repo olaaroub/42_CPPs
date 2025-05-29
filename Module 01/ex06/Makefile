@@ -1,6 +1,6 @@
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-CXXFLAGS += -fsanitize=address -g3
+# CXXFLAGS += -fsanitize=address -g3
 NAME = harlFilter
 SRC = main.cpp  Harl.cpp
 OBJ = $(SRC:.cpp=.o)
@@ -8,7 +8,7 @@ OBJ = $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)  # Now uses CXXFLAGS
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@

@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 01:50:03 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/03/18 20:49:54 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/29 15:17:54 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 
     HumanB(std::string name);
     HumanB(std::string name, Weapon* weapon);
-    void attack();
+    void attack() const;
     void setWeapon(Weapon& weapon);
     ~HumanB();
 
