@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 00:54:13 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/29 15:26:53 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/29 17:58:42 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,12 @@ int main()
 
     // {
     //     Weapon gun = Weapon("Origin Operator");
-    //     HumanB Zakaria("Zakaria");
-    //     Zakaria.setWeapon(gun);
-    //     Zakaria.attack();
+    //     HumanB messi("Messi");
+    //     messi.attack();
+    //     messi.setWeapon(gun);
+    //     messi.attack();
     //     gun.setType("RGX Outlaw");
-    //     Zakaria.attack();
+    //     messi.attack();
     // }
 
     {

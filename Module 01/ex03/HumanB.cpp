@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 02:52:51 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/29 15:25:56 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/29 17:58:57 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ HumanB::HumanB(std::string name)
     : _name(name), _weapon(NULL){}
 
 void HumanB::attack() const{
+    std::cout << this->_name << " attacks with their ";
     if(this->_weapon != NULL)
-        std::cout << this->_name << " attacks with their "
-                << this->_weapon->getType() << std::endl;
+        std::cout << this->_weapon->getType() << std::endl;
     else
-        std::cout << this->_name << " has no weapon to attack" << std::endl;
+        std::cout << "left foot" << std::endl;
 }
 
 
