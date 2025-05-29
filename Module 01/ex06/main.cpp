@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 21:36:58 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/29 16:25:20 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/29 16:37:08 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,4 @@ int main(int ac, char **av){
 
     H1.complain(level);
     return 0;
-}..
+}
