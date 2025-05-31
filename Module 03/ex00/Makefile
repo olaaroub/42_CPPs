@@ -1,11 +1,10 @@
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 # CXXFLAGS += -fsanitize=address -g3
-NAME = bsp
-SRC = Fixed.cpp main.cpp Point.cpp bsp.cpp
+NAME = clapTrap
+SRC = main.cpp  ClapTrap.cpp
 OBJ = $(SRC:.cpp=.o)
-
-DEP = $(OBJ:.o=.d)
+DEP = $(OBJ:.o=.d) 
 
 all: $(NAME)
 

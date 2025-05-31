@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 21:51:17 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/31 11:04:40 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/31 22:52:03 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <iostream>
 #include <cmath>
-
 class Fixed
 {
 
