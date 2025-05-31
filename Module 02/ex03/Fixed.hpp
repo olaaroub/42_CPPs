@@ -6,21 +6,22 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 21:51:17 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/20 14:56:46 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/05/31 11:04:40 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
-# define FIXED_HPP
+#define FIXED_HPP
 
 #include <iostream>
 #include <cmath>
 
-class Fixed{
+class Fixed
+{
 
 private:
-    int                 _value;
-    static const int    _fractionalBits = 8;
+    int _value;
+    static const int _fractionalBits = 8;
 
 public:
     Fixed();
@@ -31,10 +32,10 @@ public:
 
     int getRawBits(void) const;
     void setRawBits(int const raw);
-    float   toFloat(void) const;
-    int     toInt(void) const;
+    float toFloat(void) const;
+    int toInt(void) const;
 
-    Fixed& operator=(const Fixed &obj);
+    Fixed &operator=(const Fixed &obj);
 
     bool operator>(const Fixed &obj) const;
     bool operator<(const Fixed &obj) const;
@@ -48,18 +49,17 @@ public:
     Fixed operator*(const Fixed &obj) const;
     Fixed operator/(const Fixed &obj) const;
 
-    Fixed& operator++(); // Pre-increment
+    Fixed &operator++();   // Pre-increment
     Fixed operator++(int); // Post-increment
-    Fixed& operator--(); // Pre-decrement
+    Fixed &operator--();   // Pre-decrement
     Fixed operator--(int); // Post-decrement
 
-    static Fixed& min(Fixed& fixedPointOne, Fixed& fixedPointTwo);
-    static const Fixed& min(const Fixed& fixedPointOne,const Fixed& fixedPointTwo);
-    static Fixed& max(Fixed& fixedPointOne, Fixed& fixedPointTwo);
-    static const Fixed& max(const Fixed& fixedPointOne,const Fixed& fixedPointTwo);
-
+    static Fixed &min(Fixed &fixedPointOne, Fixed &fixedPointTwo);
+    static const Fixed &min(const Fixed &fixedPointOne, const Fixed &fixedPointTwo);
+    static Fixed &max(Fixed &fixedPointOne, Fixed &fixedPointTwo);
+    static const Fixed &max(const Fixed &fixedPointOne, const Fixed &fixedPointTwo);
 };
 
-std::ostream& operator<<(std::ostream &ostream, Fixed const &o);
+std::ostream &operator<<(std::ostream &ostream, Fixed const &o);
 
 #endif
