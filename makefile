@@ -2,15 +2,11 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 # CXXFLAGS += -fsanitize=address -g3
 
-NAME = clapTrap
-
-SRC = main.cpp \
-      ClapTrap.cpp
+NAME =
+SRC =
 
 OBJ = $(SRC:.cpp=.o)
-
 DEP = $(OBJ:.o=.d)
-
 
 all: $(NAME)
 
@@ -22,9 +18,8 @@ $(NAME): $(OBJ)
 
 -include $(DEP)
 
-
 clean:
-	rm -f $(OBJ) $(DEP)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)

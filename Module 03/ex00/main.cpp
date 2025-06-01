@@ -6,33 +6,50 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 22:31:09 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/05/31 22:40:38 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/01 20:36:29 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-// Helper function to create temporary ClapTrap objects
-ClapTrap createTemporary() {
-    return ClapTrap("TEMP");
-}
-
 int main() {
-    // Test 1: Copy from named object
-    ClapTrap original("Original");
-    ClapTrap copy1(original);
 
-    std::cout << "\n--- Temporary Copy Tests ---\n";
+    ClapTrap clappy("Clappy");
 
-    // Test 2: Copy from explicit temporary (corrected)
-    ClapTrap copy2(ClapTrap("ExplicitTemp"));  // Direct initialization
+    std::cout << std::endl << "=========================================" << std::endl << std::endl;
 
-    // Test 3: Copy from function-returned temporary
-    ClapTrap copy3 = createTemporary();  // Copy initialization
+    clappy.attack("Target Dummy");
+    clappy.attack("Target Dummy");
 
-    // Test 4: Single conversion test (works)
-    ClapTrap copy4 = std::string("StringConverted");  // Single conversion
+    std::cout << std::endl << "=========================================" << std::endl << std::endl;
 
-    std::cout << "\nAll tests completed!\n";
+    clappy.takeDamage(5);
+    clappy.takeDamage(3);
+
+    std::cout << std::endl << "=========================================" << std::endl << std::endl;
+
+    clappy.beRepaired(4);
+    clappy.beRepaired(2);
+
+    std::cout << std::endl << "=========================================" << std::endl << std::endl;
+
+    for (int i = 0; i < 8; i++) {
+        clappy.attack("Training Bot");
+    }
+
+    std::cout << std::endl << "=========================================" << std::endl << std::endl;
+
+    clappy.takeDamage(15);
+
+    std::cout << std::endl << "=========================================" << std::endl << std::endl;
+
+    clappy.beRepaired(5);
+
+    std::cout << std::endl << "=========================================" << std::endl << std::endl;
+
+    clappy.attack("Ghost");
+
+    std::cout << std::endl << "=========================================" << std::endl << std::endl;
+
     return 0;
 }
