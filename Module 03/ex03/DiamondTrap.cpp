@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 01:19:58 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/03 19:47:24 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/03 22:28:05 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,11 +61,6 @@ DiamondTrap::~DiamondTrap()
 {
 	std::cout << "[ DiamondTrap ] Destructor called!" << std::endl;
 }
-
-// void DiamondTrap::attack(const std::string &target)
-// {
-// 	ScavTrap::attack(target);
-// }
 
 void DiamondTrap::whoAmI()
 {

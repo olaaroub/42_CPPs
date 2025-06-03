@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 22:31:09 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/03 18:53:29 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/03 22:10:03 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,46 @@
 
 int main() {
 
-    ClapTrap clappy("Clappy");
+    ClapTrap clap1;
+    ClapTrap clap2("Clap2");
 
-    std::cout << std::endl << "=========================================" << std::endl << std::endl;
+    std::cout  << "========================================="  << std::endl;
 
-    clappy.attack("Target 1");
-    clappy.attack("Target 2");
+    clap2.attack("Target 1");
+    clap2.attack("Target 2");
 
-    std::cout << std::endl << "=========================================" << std::endl << std::endl;
+    std::cout  << "========================================="  << std::endl;
 
-    clappy.takeDamage(5);
-    clappy.takeDamage(3);
+    clap2.takeDamage(5);
+    clap2.takeDamage(3);
 
-    std::cout << std::endl << "=========================================" << std::endl << std::endl;
+    std::cout  << "========================================="  << std::endl;
 
-    clappy.beRepaired(4);
-    clappy.beRepaired(2);
+    clap2.beRepaired(4);
 
-    std::cout << std::endl << "=========================================" << std::endl << std::endl;
+    clap2.displayStatus();
+
+    std::cout  << "========================================="  << std::endl;
 
     for (int i = 0; i < 8; i++) {
-        clappy.attack("Training Bot");
+        clap2.attack("Training Bot");
     }
+    clap2.displayStatus();
 
-    std::cout << std::endl << "=========================================" << std::endl << std::endl;
+    std::cout  << "========================================="  << std::endl;
 
-    clappy.takeDamage(15);
+    clap1 = clap2;
+    clap1.takeDamage(15);
 
-    std::cout << std::endl << "=========================================" << std::endl << std::endl;
+    std::cout  << "========================================="  << std::endl;
 
-    clappy.beRepaired(5);
+    clap1.beRepaired(5);
 
-    std::cout << std::endl << "=========================================" << std::endl << std::endl;
+    std::cout  << "========================================="  << std::endl;
 
-    clappy.attack("Target 3");
+    clap1.attack("Target 3");
 
-    std::cout << std::endl << "=========================================" << std::endl << std::endl;
+    std::cout  << "========================================="  << std::endl;
 
     return 0;
 }

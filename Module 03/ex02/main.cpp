@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 01:19:43 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/03 21:26:23 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/03 22:26:51 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,31 +15,54 @@
 
 int main() {
 
-    FragTrap    scav;
-    scav.attack("wlad l97ab");
-    FragTrap def;
-    FragTrap named("Fraggy");
-    FragTrap copy(named);
+    FragTrap frag1;
+    FragTrap frag2("Frag2");
 
-    named.attack("Target1");
-    named.takeDamage(30);
-    named.beRepaired(15);
-    named.highFivesGuys();
+    std::cout  << "========================================="  << std::endl;
 
-    for (int i = 0; i < 100; i++) {
-        std::cout << i + 1 << ": ";
-        named.attack("Training bot");
+    frag2.attack("Target 1");
+
+    std::cout  << "========================================="  << std::endl;
+
+    frag2.takeDamage(50);
+    frag2.takeDamage(30);
+
+    std::cout  << "========================================="  << std::endl;
+
+    frag2.beRepaired(10);
+
+    frag2.displayStatus();
+
+    std::cout  << "========================================="  << std::endl;
+
+    for (int i = 0; i < 10; i++) {
+        frag2.attack("Training Bot");
     }
-    named.beRepaired(10);
 
-    named.takeDamage(200);
-    named.attack("Ghost");
-    named.highFivesGuys();
+    frag2.displayStatus();
 
-    copy.attack("CopyTarget");
-    copy.highFivesGuys();
-    def = named;
-    def.attack("AssignedTarget");
+    std::cout  << "========================================="  << std::endl;
+
+    frag2.highFivesGuys();
+
+    std::cout  << "========================================="  << std::endl;
+
+    frag1 = frag2;
+    frag1.takeDamage(40);
+
+    std::cout  << "========================================="  << std::endl;
+
+    frag1.beRepaired(5);
+
+    std::cout  << "========================================="  << std::endl;
+
+    frag1.attack("Target 3");
+
+    std::cout  << "========================================="  << std::endl;
+
+    frag1.highFivesGuys();
+
+    std::cout  << "========================================="  << std::endl;
 
     return 0;
 }

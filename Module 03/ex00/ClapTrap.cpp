@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 22:07:02 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/03 02:15:30 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/03 22:11:03 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 
 
 void ClapTrap::displayStatus() const {
-    std::cout << "Status of " << _name << ":" << std::endl;
-    std::cout << "  Hit Points: " << _hitPoints << std::endl;
-    std::cout << "  Energy Points: " << _energyPoints << std::endl;
+    std::cout << "==> Status of [ " << _name << " ]:" << std::endl;
+    std::cout << "    Hit Points: " << _hitPoints << std::endl;
+    std::cout << "    Energy Points: " << _energyPoints << std::endl;
 }
