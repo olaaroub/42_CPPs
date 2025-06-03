@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 01:19:58 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/03 14:35:21 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/03 19:47:24 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 DiamondTrap::DiamondTrap()
 	: ClapTrap("Default_clap_name"),
-	ScavTrap(),
-	FragTrap(),
+	  ScavTrap(),
+	  FragTrap(),
 	  _name("Default")
 {
 	ClapTrap::_hitPoints = 100;
@@ -26,8 +26,8 @@ DiamondTrap::DiamondTrap()
 
 DiamondTrap::DiamondTrap(std::string name)
 	: ClapTrap(name + "_clap_name"),
-	ScavTrap(name),
-	FragTrap(name),
+	  ScavTrap(name),
+	  FragTrap(name),
 	  _name(name)
 {
 	std::cout << "[ DiamondTrap ] Name constructor called!" << std::endl;
@@ -39,8 +39,8 @@ DiamondTrap::DiamondTrap(std::string name)
 
 DiamondTrap::DiamondTrap(const DiamondTrap &other)
 	: ClapTrap(other),
-	ScavTrap(other),
-	FragTrap(other),
+	  ScavTrap(other),
+	  FragTrap(other),
 	  _name(other._name)
 {
 	std::cout << "[ DiamondTrap ] Copy constructor called!" << std::endl;
@@ -62,10 +62,10 @@ DiamondTrap::~DiamondTrap()
 	std::cout << "[ DiamondTrap ] Destructor called!" << std::endl;
 }
 
-void DiamondTrap::attack(const std::string &target)
-{
-	ScavTrap::attack(target);
-}
+// void DiamondTrap::attack(const std::string &target)
+// {
+// 	ScavTrap::attack(target);
+// }
 
 void DiamondTrap::whoAmI()
 {

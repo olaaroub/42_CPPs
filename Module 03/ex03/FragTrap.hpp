@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 18:58:16 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/03 02:27:23 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/03 19:41:50 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
     FragTrap &operator=(const FragTrap &obj);
     ~FragTrap();
 
-    void attack(const std::string &target);
+    // void attack(const std::string &target);
     void highFivesGuys() const;
 };
 

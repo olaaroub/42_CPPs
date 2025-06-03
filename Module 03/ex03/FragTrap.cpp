@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 20:09:17 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/03 13:49:47 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/03 19:41:58 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,24 +48,24 @@ FragTrap::~FragTrap()
     std::cout << "[ FragTrap ] Destructor called!" << std::endl;
 }
 
-void FragTrap::attack(const std::string &target)
-{
-    if (_hitPoints == 0)
-    {
-        std::cout << "FragTrap " << _name << " is dead and cannot attack." << std::endl;
-        return;
-    }
-    if (_energyPoints == 0)
-    {
-        std::cout << "FragTrap " << _name << " has no energy points left to attack!" << std::endl;
-        return;
-    }
+// void FragTrap::attack(const std::string &target)
+// {
+//     if (_hitPoints == 0)
+//     {
+//         std::cout << "FragTrap " << _name << " is dead and cannot attack." << std::endl;
+//         return;
+//     }
+//     if (_energyPoints == 0)
+//     {
+//         std::cout << "FragTrap " << _name << " has no energy points left to attack!" << std::endl;
+//         return;
+//     }
 
-    _energyPoints--;
-    std::cout << "FragTrap " << _name << " attacks " << target
-              << ", causing " << _attackDamage << " points of damage!"
-              << std::endl;
-}
+//     _energyPoints--;
+//     std::cout << "FragTrap " << _name << " attacks " << target
+//               << ", causing " << _attackDamage << " points of damage!"
+//               << std::endl;
+// }
 
 void FragTrap::highFivesGuys() const
 {
