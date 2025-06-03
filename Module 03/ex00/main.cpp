@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 22:31:09 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/01 20:36:29 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/02 20:43:14 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int main() {
 
     std::cout << std::endl << "=========================================" << std::endl << std::endl;
 
-    clappy.attack("Target Dummy");
-    clappy.attack("Target Dummy");
+    clappy.attack("Target 1");
+    clappy.attack("Target 2");
 
     std::cout << std::endl << "=========================================" << std::endl << std::endl;
 
@@ -47,7 +47,7 @@ int main() {
 
     std::cout << std::endl << "=========================================" << std::endl << std::endl;
 
-    clappy.attack("Ghost");
+    clappy.attack("Target 3");
 
     std::cout << std::endl << "=========================================" << std::endl << std::endl;
 
