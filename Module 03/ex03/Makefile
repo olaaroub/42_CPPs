@@ -6,33 +6,35 @@ NAME = DiamondTrap
 
 SRC = main.cpp \
       ClapTrap.cpp \
-	  FragTrap.cpp\
-	  ScavTrap.cpp\
-	  DiamondTrap.cpp\
+      FragTrap.cpp \
+      ScavTrap.cpp \
+      DiamondTrap.cpp
 
+OPATH = dependencies
 OBJ = $(SRC:.cpp=.o)
-
-DEP = $(OBJ:.o=.d)
-
+OBJS = $(addprefix $(OPATH)/,$(OBJ))
+DEPS = $(OBJS:.o=.d)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $@
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $@
 
-%.o: %.cpp
+$(OPATH)/%.o: %.cpp | $(OPATH)
 	$(CXX) $(CXXFLAGS) -MMD -MP -c $< -o $@
 
--include $(DEP)
+$(OPATH):
+	mkdir -p $(OPATH)
 
+-include $(DEPS)
 
 clean:
-	rm -f $(OBJ) $(DEP)
+	rm -f $(OBJS) $(DEPS)
 
 fclean: clean
 	rm -f $(NAME)
+	rm -rf $(OPATH)
 
 re: fclean all
 
 .PHONY: all clean fclean re
-.SECONDARY: $(OBJ)

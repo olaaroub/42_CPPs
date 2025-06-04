@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 01:19:43 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/03 22:26:51 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/04 12:05:14 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main() {
 
     frag2.takeDamage(50);
     frag2.takeDamage(30);
-
+    
     std::cout  << "========================================="  << std::endl;
 
     frag2.beRepaired(10);

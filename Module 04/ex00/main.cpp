@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 01:02:27 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/04 12:05:48 by olaaroub         ###   ########.fr       */
+/*   Created: 2025/06/04 15:22:37 by olaaroub          #+#    #+#             */
+/*   Updated: 2025/06/04 22:17:17 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#include "Dog.hpp"
+#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-#include "ClapTrap.hpp"
-
-class ScavTrap : public ClapTrap
+int main()
 {
-public:
-    ScavTrap();
-    ScavTrap(std::string name);
-    ScavTrap(const ScavTrap &obj);
-    ScavTrap &operator=(const ScavTrap &obj);
-    ~ScavTrap();
-
-    void attack(const std::string& target);
-    void guardGate() const;
-};
-
-#endif
+    const WrongAnimal *meta = new WrongAnimal();
+    const Animal *j = new Dog();
+    const WrongAnimal *i = new WrongCat();
+    std::cout << j->getType() << " " << std::endl;
+    std::cout << i->getType() << " " << std::endl;
+    i->makeSound();
+    meta->makeSound();
+    return 0;
+}

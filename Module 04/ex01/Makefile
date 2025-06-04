@@ -2,14 +2,12 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 # CXXFLAGS += -fsanitize=address -g3
 
-NAME = fragTrap
+NAME = poly
 
-SRC = main.cpp \
-      ClapTrap.cpp \
-      FragTrap.cpp \
-      ScavTrap.cpp \
+SRC = main.cpp Animal.cpp  Cat.cpp Dog.cpp  Brain.cpp
 
-OPATH = objects
+
+OPATH = dependencies
 OBJ = $(SRC:.cpp=.o)
 OBJS = $(addprefix $(OPATH)/,$(OBJ))
 DEPS = $(OBJS:.o=.d)
