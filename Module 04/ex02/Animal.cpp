@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 13:59:45 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/05 11:58:49 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/05 12:15:42 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ Animal::~Animal()
     std::cout << "[ Animal ] destructor called!" << std::endl;
 }
 
-void Animal::makeSound() const
-{
-    std::cout << "Animal makeSound() !" << std::endl;
-}
+// void Animal::makeSound() const
+// {
+//     std::cout << "Animal makeSound() !" << std::endl;
+// }
 
 const std::string Animal::getType() const
 {

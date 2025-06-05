@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 21:38:02 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/05 11:59:35 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/04 22:18:38 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ WrongAnimal::~WrongAnimal()
     std::cout << "[ WrongAnimal ] destructor called!" << std::endl;
 }
 
-const std::string WrongAnimal::getType() const
+std::string WrongAnimal::getType() const
 {
     return _type;
 }

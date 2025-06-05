@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 13:54:43 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/04 23:49:11 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/05 11:58:42 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
     Animal &operator=(const Animal &obj);
     virtual ~Animal();
 
-    std::string getType() const;
+    const std::string getType() const;
     virtual void makeSound() const;
 };
 

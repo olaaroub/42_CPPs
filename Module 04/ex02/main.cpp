@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 15:22:37 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/05 12:11:23 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/05 12:16:00 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main()
 {
     std::cout << "========================================================" << std::endl;
 
-    const Animal *meta = new Animal;
+    // const Animal *meta = new Animal;
     const Animal *j = new Dog();
     const Animal *i = new Cat();
     Cat cat;
@@ -31,7 +31,7 @@ int main()
 
     i->makeSound();
     j->makeSound();
-    meta->makeSound();
+    // meta->makeSound();
 
     std::cout << "========================================================" << std::endl;
 
@@ -39,7 +39,7 @@ int main()
 
     std::cout << "========================================================" << std::endl;
 
-    delete meta;
+    // delete meta;
     delete j;
     delete i;
 

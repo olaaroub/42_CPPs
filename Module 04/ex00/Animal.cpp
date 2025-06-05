@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 13:59:45 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/04 22:16:57 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/05 11:59:17 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void Animal::makeSound() const
     std::cout << "Animal makeSound() !" << std::endl;
 }
 
-std::string Animal::getType() const
+const std::string Animal::getType() const
 {
     return _type;
 }
