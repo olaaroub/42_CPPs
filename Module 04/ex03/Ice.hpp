@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 00:37:29 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/10 18:49:15 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/10 21:31:25 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 #define ICE_HPP
 
 #include "AMateria.hpp"
-// #include "ICharacter.hpp"
-// #include "Character.hpp"
 
 class Ice : public AMateria
 {

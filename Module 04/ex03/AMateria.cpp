@@ -6,13 +6,13 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 23:51:49 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/09 17:16:21 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/10 21:30:34 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
-AMateria::AMateria(): _type("uninitialized")
+AMateria::AMateria() : _type("uninitialized")
 {
     std::cout << "[ AMateria ] Default constructor called!" << std::endl;
 }
