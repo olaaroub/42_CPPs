@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 17:09:58 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/10 00:09:55 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/10 20:38:37 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ Character &Character::operator=(const Character &obj)
             _slot[i] = (obj._slot[i])->clone();
     }
     std::cout << "[ Character ] copy assignment operatot called!" << std::endl;
+    return *this;
 }
 
 Character::~Character()
@@ -65,9 +66,9 @@ const std::string &Character::getName() const
     return _name;
 }
 
-void Character::equip(AMateria *m)
+void Character::equip(AMateria *materia)
 {
-    if (!m)
+    if (!materia)
     {
         std::cout << "Not a valid materia!" << std::endl;
         return;
@@ -76,12 +77,23 @@ void Character::equip(AMateria *m)
     {
         if (_slot[i] == 0)
         {
-            _slot[i] = m;
+            _slot[i] = materia;
             std::cout << "Equip complete." << std::endl;
             return;
         }
     }
     std::cout << "Equip failed." << std::endl;
+}
+
+void Character::unequip(int idx)
+{
+    if (idx >= 0 && idx < 4 && _slot[idx])
+    {
+        _slot[idx] = 0;
+        std::cout << "Unequip completed" << std::endl;
+        return;
+    }
+    std::cout << "Unequip failed" << std::endl;
 }
 
 void Character::use(int idx, ICharacter &target)
@@ -92,9 +104,13 @@ void Character::use(int idx, ICharacter &target)
         std::cout << "Use complete." << std::endl;
         return;
     }
-    std::cout << "Use incomplete." << std::endl;
+    std::cout << "Use failed." << std::endl;
 }
+
 AMateria *Character::getMateria(int idx)
 {
-    return _slot[idx];
+    if (idx >= 0 && idx < 4)
+        return this->_slot[idx];
+
+    return (NULL);
 }

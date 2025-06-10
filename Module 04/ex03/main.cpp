@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/10 18:33:49 by olaaroub          #+#    #+#             */
+/*   Updated: 2025/06/10 20:51:51 by olaaroub         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "AMateria.hpp"
 #include "Character.hpp"
 #include "Cure.hpp"
@@ -11,7 +23,12 @@ int main()
     src->learnMateria(new Ice());
     src->learnMateria(new Cure());
 
+    // MateriaSource s1;
+    // MateriaSource s2 = s1; // test deep copy
+
     ICharacter* me = new Character("me");
+	// Character* me = new Character("me"); // test on floor materias
+
     AMateria* tmp;
 
     tmp = src->createMateria("ice");
@@ -23,7 +40,10 @@ int main()
 
     me->use(0, *bob);
     me->use(1, *bob);
-    me->unequip(-1);
+
+    // AMateria* onFloor = me->getMateria(0);
+    // me->unequip(0);
+    // delete onFloor; 
 
     delete bob;
     delete me;
@@ -60,3 +80,4 @@ int main()
 
 	return (0);
 }
+

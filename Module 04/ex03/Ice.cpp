@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 00:42:15 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/10 01:00:54 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/10 18:43:31 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ Ice::Ice(const Ice &obj) : AMateria("ice")
 
 Ice &Ice::operator=(const Ice &obj)
 {
+    // if(this != &obj)
+    //     _type = obj._type;
+    (void) obj;
     std::cout << "[ Ice ] assignment operator called." << std::endl;
     return *this;
 }

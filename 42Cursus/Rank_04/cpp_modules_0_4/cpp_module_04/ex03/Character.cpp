@@ -58,9 +58,9 @@ std::string const &Character::getName() const
     return (this->name);
 }
 
-void Character::equip(AMateria* m)
+void Character::equip(AMateria* materia)
 {
-    if (m == NULL)
+    if (materia == NULL)
     {
         std::cout << "Not a valid materia!!!" << std::endl;
         return;
@@ -69,7 +69,7 @@ void Character::equip(AMateria* m)
     {
         if (this->slot[counter] == 0)
         {
-            this->slot[counter] = m;
+            this->slot[counter] = materia;
             std::cout << "Equipe complete." << std::endl;
             return;
         }

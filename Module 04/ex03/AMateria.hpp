@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 23:40:10 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/09 16:35:46 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/10 18:40:14 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
     AMateria(std::string const &type);
     AMateria(const AMateria &obj);
     AMateria &operator=(const AMateria &obj);
-    ~AMateria();
+    virtual ~AMateria();
 
     std::string const &getType() const;
 

@@ -1,10 +1,10 @@
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-# CXXFLAGS += -fsanitize=address -g3
+CXXFLAGS += -fsanitize=address -g3
 
 NAME = prog03
 
-SRC = main.cpp 
+SRC = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 
 
 OPATH = dependencies

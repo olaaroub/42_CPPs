@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Character.hpp                                      :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 16:39:38 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/09 16:56:12 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/10 18:38:37 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #define ICHARACTER_HPP
 
 #include <iostream>
-#include "AMateria.hpp"
+// #include "AMateria.hpp"
+class AMateria;
 
 class ICharacter
 {
