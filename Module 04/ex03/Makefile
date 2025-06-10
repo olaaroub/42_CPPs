@@ -2,9 +2,9 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 # CXXFLAGS += -fsanitize=address -g3
 
-NAME = prog02
+NAME = prog03
 
-SRC = main.cpp Animal.cpp  Cat.cpp Dog.cpp  Brain.cpp
+SRC = main.cpp 
 
 
 OPATH = dependencies
