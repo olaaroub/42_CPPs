@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 22:34:45 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/05 12:11:42 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/11 17:16:36 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Brain &Brain::operator=(const Brain &obj)
     std::cout << "[ Brain ] assignment operator called!" << std::endl;
     if (this != &obj)
     {
-        for (size_t i = 0; i < 100; i++)
+        for (int i = 0; i < 100; i++)
         {
             _ideas[i] = obj._ideas[i];
         }

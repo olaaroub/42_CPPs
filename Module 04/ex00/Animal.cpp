@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 13:59:45 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/05 11:59:17 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/11 17:07:49 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ Animal::Animal()
 
 Animal::Animal(const Animal &obj)
 {
-
     _type = obj._type;
     std::cout << "[ Animal ] copy constructor called!" << std::endl;
 }
@@ -41,7 +40,7 @@ Animal::~Animal()
 
 void Animal::makeSound() const
 {
-    std::cout << "Animal makeSound() !" << std::endl;
+    std::cout << "[ Animal ] makeSound() called!" << std::endl;
 }
 
 const std::string Animal::getType() const

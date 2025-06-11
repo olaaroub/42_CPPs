@@ -6,19 +6,19 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 14:57:31 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/05 12:11:31 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/11 17:37:15 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() : _brains(new Brain("hot dog"))
+Dog::Dog() : _brains(new Brain("Dogs's ideas"))
 {
     _type = "Dog";
     std::cout << "[ Dog ] default constructor called!" << std::endl;
 }
 
-Dog::Dog(const Dog &obj) : Animal(obj), _brains(new Brain("hot dog"))
+Dog::Dog(const Dog &obj) : Animal(obj), _brains(new Brain("Dogs's ideas"))
 {
     std::cout << "[ Dog ] copy constructor called!" << std::endl;
     *this = obj;
@@ -45,5 +45,5 @@ Dog::~Dog()
 
 void Dog::makeSound() const
 {
-    std::cout << "Cat's Sounds" << std::endl;
+    std::cout << "Dog: Barking.. !!" << std::endl;
 }

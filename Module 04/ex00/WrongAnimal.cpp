@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 21:38:02 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/05 11:59:35 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/11 17:10:53 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,5 @@ const std::string WrongAnimal::getType() const
 
 void WrongAnimal::makeSound() const
 {
-    std::cout << "WrongAnimal sound..!" << std::endl;
+    std::cout << "[ WrongAnimal ] makeSound() called!" << std::endl;
 }

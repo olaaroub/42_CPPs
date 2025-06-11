@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 14:57:31 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/04 22:17:07 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/11 17:09:53 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,5 @@ Dog::~Dog()
 
 void Dog::makeSound() const
 {
-    std::cout << "real madrid fans are barking!!" << std::endl;
+    std::cout << "Dog: Barking.. !!" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 21:30:35 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/04 22:17:02 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/11 17:09:59 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,5 @@ Cat::~Cat()
 
 void Cat::makeSound() const
 {
-    std::cout << "Meow.. !!" << std::endl;
+    std::cout << "Cat: Meow.. !!" << std::endl;
 }
