@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 18:16:58 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/11 18:22:03 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/11 22:16:48 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,11 @@ void MateriaSource::learnMateria(AMateria *materia)
         if (!_materia[i])
         {
             _materia[i] = materia->clone();
-            delete materia;
-            return;
+            break;
         }
     }
+    delete materia;
+    return;
 }
 
 AMateria *MateriaSource::createMateria(const std::string &type)

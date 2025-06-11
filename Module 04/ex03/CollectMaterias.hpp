@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   CollectMaterias.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/04 13:54:43 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/11 22:06:22 by olaaroub         ###   ########.fr       */
+/*   Created: 2025/06/11 20:40:17 by olaaroub          #+#    #+#             */
+/*   Updated: 2025/06/11 22:09:01 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef COLLECTMATERIAS_HPP
+#define COLLECTMATERIAS_HPP
 
-#include <iostream>
+#include "AMateria.hpp"
 
-class Animal
+struct ScollectMaterias
 {
-protected:
-    std::string _type;
-
-public:
-    Animal();
-    Animal(const Animal &obj);
-    Animal &operator=(const Animal &obj);
-    virtual ~Animal();
-
-    const std::string getType() const;
-    virtual void makeSound() const;
+    AMateria *materia;
+    ScollectMaterias *next;
+    ~ScollectMaterias();
 };
+
+extern ScollectMaterias *collector;
+
+void collectMateria(AMateria *materia);
+// void clearList();
 
 #endif

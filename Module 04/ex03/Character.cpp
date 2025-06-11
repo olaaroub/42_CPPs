@@ -6,11 +6,12 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 17:09:58 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/11 00:30:15 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/11 22:09:27 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
+#include "CollectMaterias.hpp"
 
 Character::Character() : _name("uninitialized")
 {
@@ -87,12 +88,14 @@ void Character::equip(AMateria *materia)
         }
     }
     std::cout << "Equip failed." << std::endl;
+    collectMateria(materia);
 }
 
 void Character::unequip(int idx)
 {
     if (idx >= 0 && idx < 4 && _slot[idx])
     {
+        collectMateria(_slot[idx]);
         _slot[idx] = 0;
         std::cout << "Unequip completed" << std::endl;
         return;
@@ -102,7 +105,7 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter &target)
 {
-    if (_slot[idx] && (idx >= 0 && idx < 4))
+    if ((idx >= 0 && idx < 4) && _slot[idx])
     {
         _slot[idx]->use(target);
         std::cout << "Use complete." << std::endl;

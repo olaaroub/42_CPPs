@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 15:22:37 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/11 18:19:44 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/11 22:07:53 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 
 int main()
 {
-    // Animal *objects[8];
-    // for (int i = 0; i < 8; i++)
-    // {
-    //     if (i < 4)
-    //         objects[i] = new Dog();
-    //     else
-    //         objects[i] = new Cat();
-    // }
+    Animal *objects[8];
+    for (int i = 0; i < 8; i++)
+    {
+        if (i < 4)
+            objects[i] = new Dog();
+        else
+            objects[i] = new Cat();
+    }
 
     std::cout << "========================================================" << std::endl;
 
@@ -70,13 +70,13 @@ int main()
 
     std::cout << "========================================================" << std::endl;
 
-    // for(int i = 0; i < 8; i++)
-    //     objects[i]->makeSound();
+    for(int i = 0; i < 8; i++)
+        objects[i]->makeSound();
 
-    // std::cout << "========================================================" << std::endl;
+    std::cout << "========================================================" << std::endl;
 
-    // for(int i = 0; i < 8; i++)
-    //     delete objects[i];
+    for(int i = 0; i < 8; i++)
+        delete objects[i];
 
     return 0;
 }
