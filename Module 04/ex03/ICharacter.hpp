@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 16:39:38 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/10 21:31:35 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/11 01:22:38 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define ICHARACTER_HPP
 
 #include <iostream>
+// #include "AMateria.hpp"
 class AMateria;
 
 class ICharacter

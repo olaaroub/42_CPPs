@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 18:33:49 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/10 21:30:23 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/11 01:49:04 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int main()
     me->use(0, *bob);
     me->use(1, *bob);
 
+    // bob->use(0, *me); // invalid use (empty)
     // AMateria* onFloor = me->getMateria(0);
     // me->unequip(0);
     // delete onFloor;

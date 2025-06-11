@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 17:09:58 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/10 20:38:37 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/11 00:30:15 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,23 +30,27 @@ Character::Character(const Character &obj) : _name(obj._name)
 {
     for (int i = 0; i < 4; i++)
     {
-        // if (this->_slot[i])
-        // this->_slot[i] = 0;
         if (obj._slot[i])
             _slot[i] = (obj._slot[i])->clone();
+        else
+            _slot[i] = 0;
     }
     std::cout << "[ Character ] copy constructor called!" << std::endl;
 }
 
 Character &Character::operator=(const Character &obj)
 {
-    _name = obj._name;
-    for (int i = 0; i < 4; i++)
+    if (this != &obj)
     {
-        if (_slot[i])
-            delete _slot[i];
-        if (obj._slot[i])
-            _slot[i] = (obj._slot[i])->clone();
+        _name = obj._name;
+        for (int i = 0; i < 4; i++)
+        {
+            if (_slot[i])
+                delete _slot[i];
+            _slot[i] = NULL;
+            if (obj._slot[i])
+                _slot[i] = obj._slot[i]->clone();
+        }
     }
     std::cout << "[ Character ] copy assignment operatot called!" << std::endl;
     return *this;
