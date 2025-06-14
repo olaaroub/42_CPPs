@@ -10,13 +10,13 @@ int main()
         Bureaucrat b4("TEST3", 1);
 
         b4.increment();
-        // b3.decrement();
+        b3.decrement();
         std::cout << b3 << b4 << std::endl;
     }
-    // catch(Bureaucrat::GradeTooLowException & e)
-    // {
-    //     std::cout << "[ Exception ] : " << e.what() << std::endl;
-    // }
+    catch(Bureaucrat::GradeTooLowException & e)
+    {
+        std::cout << "[ Exception ] : " << e.what() << std::endl;
+    }
     catch(Bureaucrat::GradeTooHighException & e)
     {
         std::cout << "[ Exception ] : " << e.what() << std::endl;

@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 23:24:53 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/14 23:09:19 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/14 23:28:10 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,21 @@ void Bureaucrat::incrementGrade()
 	if (--_grade < 1)
 		throw Bureaucrat::GradeTooHighException();
 }
+
 void Bureaucrat::decrementGrade()
 {
 	if (++_grade > 150)
 		throw Bureaucrat::GradeTooLowException();
 }
+
+void Bureaucrat::signForm(const Form &form)
+{
+	if(_grade > form.getRts())
+		std::cout << _name << " cannot sign " << form.getName() << " because their grade is too low." << std::endl;
+	else
+		std::cout << _name << " signs " << form.getName() << "." << std::endl;
+}
+
 Bureaucrat::~Bureaucrat()
 {
 	std::cout << "Destructor for " << _name << " called!" << std::endl;

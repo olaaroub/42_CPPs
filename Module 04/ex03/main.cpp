@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 18:33:49 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/11 22:05:10 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/14 18:38:34 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "Cure.hpp"
 #include "Ice.hpp"
 #include "MateriaSource.hpp"
-
+// #include "CollectMaterias.hpp"
 int main()
 {
     IMateriaSource *src = new MateriaSource();
@@ -48,6 +48,7 @@ int main()
     delete bob;
     delete me;
     delete src;
+    // delete collector;
 
     return (0);
 }
