@@ -6,34 +6,38 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 16:07:46 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/14 23:09:15 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/15 20:15:29 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main()
 {
+
     try
     {
-        // Bureaucrat b1("TEST0", 160);
-        // Bureaucrat b2("TEST1", -10);
-        Bureaucrat b3("TEST2", 150);
-        Bureaucrat b4("TEST3", 1);
+        Bureaucrat b3("TEST2", 8);
+        Form f3("FORM3", 10, 40);
 
-        b4.incrementGrade();
-        b3.decrementGrade();
-        std::cout << b3 << std::endl
-                  << b4 << std::endl;
+        std::cout << f3 << std::endl;
+
+        f3.beSigned(b3);
+
+        std::cout << f3 << std::endl;
+
+        b3.signForm(f3);
     }
-    catch (Bureaucrat::GradeTooLowException &e)
+    catch (Form::GradeTooHighException &e)
     {
         std::cout << "[ Exception ] : " << e.what() << std::endl;
     }
-    catch (Bureaucrat::GradeTooHighException &e)
+    catch (Form::GradeTooLowException &e)
     {
         std::cout << "[ Exception ] : " << e.what() << std::endl;
     }
+
     return (0);
 }
