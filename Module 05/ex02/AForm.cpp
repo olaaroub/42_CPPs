@@ -1,71 +1,69 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 15:14:26 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/15 23:24:19 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/15 23:17:28 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
-Form::Form(std::string name, int signGrade, int execGrade)
+AForm::AForm(std::string name, int signGrade, int execGrade)
 	: _name(name), _signGrade(signGrade),
 	  _execGrade(execGrade), _formStat(false)
 {
-	std::cout << "[ Form ] parameterized construcor for " << _name << " called!" << std::endl;
+	std::cout << "[ AForm ] parameterized construcor for " << _name << " called!" << std::endl;
 	if (_signGrade < 1 || _execGrade < 1)
-		throw Form::GradeTooHighException();
+		throw AForm::GradeTooHighException();
 	if (_signGrade > 150 || _execGrade > 150)
-		throw Form::GradeTooLowException();
+		throw AForm::GradeTooLowException();
 
-	std::cout << "Form " << _name << " created with signGrade and exeGrade of: "
+	std::cout << "AForm " << _name << " created with signGrade and exeGrade of: "
 			  << _signGrade << ", " << _execGrade << "." << std::endl;
 }
 
-Form::Form(const Form &obj)
+AForm::AForm(const AForm &obj)
 	: _name(obj._name), _signGrade(obj._signGrade),
 	  _execGrade(obj._execGrade), _formStat(false)
 {
-	std::cout << "[ Form ] copy constructor called!" << std::endl;
+	std::cout << "[ AForm ] copy constructor called!" << std::endl;
 }
 
-Form &Form::operator=(const Form &obj)
+AForm &AForm::operator=(const AForm &obj)
 {
-	std::cout << "[ Form ] copy assignment operator called!" << std::endl;
+	std::cout << "[ AForm ] copy assignment operator called!" << std::endl;
 	if (this != &obj)
 		_formStat = obj._formStat;
 	return *this;
 }
 
-Form::~Form()
+AForm::~AForm()
 {
-	std::cout << "[ Form ] destructor for " << _name << " called!" << std::endl;
+	std::cout << "[ AForm ] destructor for " << _name << " called!" << std::endl;
 }
 
-const std::string &Form::getName() const { return _name; }
-bool Form::getFormStatus() const { return _formStat; }
-int Form::getSignGrade() const { return _signGrade; }
-int Form::getExecGrade() const { return _execGrade; }
+const std::string &AForm::getName() const { return _name; }
+bool AForm::getFormStatus() const { return _formStat; }
+int AForm::getSignGrade() const { return _signGrade; }
+int AForm::getExecGrade() const { return _execGrade; }
 
-void Form::beSigned(const Bureaucrat &bureaucrat)
+void AForm::beSigned(const Bureaucrat &bureaucrat)
 {
 	if (bureaucrat.getGrade() <= _signGrade)
 	{
 		_formStat = true;
 		std::cout << bureaucrat.getName() << " signs " << _name << "." << std::endl;
 	}
-	else if (_formStat == true)
-		throw FormAlreadySigned();
 	else
-		throw Form::GradeTooLowException();
+		throw AForm::GradeTooLowException();
 }
 
-std::ostream &operator<<(std::ostream &output, const Form &obj)
+std::ostream &operator<<(std::ostream &output, const AForm &obj)
 {
 	output << "Form Name: " << obj.getName()
 		   << ", Sign Grade: " << obj.getSignGrade()

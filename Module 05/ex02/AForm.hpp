@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 23:10:31 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/15 23:24:12 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/15 23:20:35 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-#define FORM_HPP
+#ifndef AFORM_HPP
+#define AFORM_HPP
 
 #include <iostream>
-// #include "Bureaucrat.hpp"
 class Bureaucrat;
-class Form
+
+class AForm
 {
 private:
 	const std::string _name;
@@ -24,13 +24,13 @@ private:
 	const int _execGrade;
 	bool _formStat;
 
-	Form();
+	AForm();
 
 public:
-	Form(std::string name, int signGrade, int execGrade);
-	Form(const Form &obj);
-	Form &operator=(const Form &obj);
-	~Form();
+	AForm(std::string name, int signGrade, int execGrade);
+	AForm(const AForm &obj);
+	AForm &operator=(const AForm &obj);
+	~AForm();
 
 	const std::string &getName() const;
 	bool getFormStatus() const;
@@ -57,7 +57,7 @@ public:
 		}
 	};
 
-	class FormAlreadySigned : public std::exception
+	class FormNotSigned : public std::exception
 	{
 	public:
 		const char *what() const throw()
@@ -67,6 +67,6 @@ public:
 	};
 };
 
-std::ostream &operator<<(std::ostream &output, const Form &obj);
+std::ostream &operator<<(std::ostream &output, const AForm &obj);
 
 #endif
