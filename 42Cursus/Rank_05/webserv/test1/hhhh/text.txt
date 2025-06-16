@@ -1,6 +1,0 @@
-gvbn
-h
-gm
-m
-cm
-cbn

@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 23:10:31 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/15 23:20:35 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/16 16:09:27 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ public:
 	int getExecGrade() const;
 
 	void beSigned(const Bureaucrat &bureaucrat);
+
+	virtual void execute(const Bureaucrat &executor) const = 0;
 
 	class GradeTooHighException : public std::exception
 	{
