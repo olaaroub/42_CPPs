@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 23:10:31 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/16 16:59:13 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/16 22:22:37 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define AFORM_HPP
 
 #include <iostream>
+#include "Bureaucrat.hpp"
+
 class Bureaucrat;
 
 class AForm

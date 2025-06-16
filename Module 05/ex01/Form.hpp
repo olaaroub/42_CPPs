@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 23:10:31 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/16 16:53:59 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/16 22:46:36 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 #define FORM_HPP
 
 #include <iostream>
-// #include "Bureaucrat.hpp"
+
+#include "Bureaucrat.hpp"
+
 class Bureaucrat;
 class Form
 {

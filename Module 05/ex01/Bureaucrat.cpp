@@ -6,12 +6,11 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 23:24:53 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/16 16:47:16 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/16 22:23:41 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-// #include "Form.hpp"
 
 const char *Bureaucrat::GradeTooLowException::what() const throw()
 {

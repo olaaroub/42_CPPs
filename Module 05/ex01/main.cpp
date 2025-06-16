@@ -6,12 +6,11 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 16:07:46 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/16 17:03:16 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/16 22:45:11 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Bureaucrat.hpp"
 #include "Form.hpp"
 
 int main()
