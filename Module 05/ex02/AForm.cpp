@@ -6,12 +6,32 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 15:14:26 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/15 23:17:28 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/16 17:00:23 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
+
+const char *AForm::GradeTooLowException::what() const throw()
+{
+	return ("[ Grade too low ]");
+}
+
+const char *AForm::GradeTooHighException::what() const throw()
+{
+	return ("[ Grade too high ]");
+}
+
+const char *AForm::FormAlreadySigned::what() const throw()
+{
+	return ("[ Form already signed ]");
+}
+
+const char *AForm::FormNotSigned::what() const throw()
+{
+	return ("[ Form not signed ]");
+}
 
 AForm::AForm(std::string name, int signGrade, int execGrade)
 	: _name(name), _signGrade(signGrade),
@@ -54,11 +74,10 @@ int AForm::getExecGrade() const { return _execGrade; }
 
 void AForm::beSigned(const Bureaucrat &bureaucrat)
 {
+	if (_formStat == true)
+		throw AForm::FormAlreadySigned();
 	if (bureaucrat.getGrade() <= _signGrade)
-	{
 		_formStat = true;
-		std::cout << bureaucrat.getName() << " signs " << _name << "." << std::endl;
-	}
 	else
 		throw AForm::GradeTooLowException();
 }

@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 16:07:46 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/14 23:09:15 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/16 17:04:34 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,7 @@ int main()
         std::cout << b3 << std::endl
                   << b4 << std::endl;
     }
-    catch (Bureaucrat::GradeTooLowException &e)
-    {
-        std::cout << "[ Exception ] : " << e.what() << std::endl;
-    }
-    catch (Bureaucrat::GradeTooHighException &e)
+    catch (std::exception &e)
     {
         std::cout << "[ Exception ] : " << e.what() << std::endl;
     }

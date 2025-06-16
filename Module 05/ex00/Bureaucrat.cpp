@@ -6,11 +6,20 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 23:24:53 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/14 23:09:19 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/16 16:27:26 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+const char *Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return ("[ Grade too low ]");
+}
+const char *Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return ("[ Grade too high ]");
+}
 
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
 {
@@ -33,9 +42,7 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &obj)
 {
 	std::cout << "[ Bureaucrat ] copy assignment operator called!" << std::endl;
 	if (this != &obj)
-	{
 		_grade = obj._grade;
-	}
 	return *this;
 }
 

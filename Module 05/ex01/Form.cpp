@@ -6,12 +6,27 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 15:14:26 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/15 23:24:19 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/16 16:52:22 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
+
+const char* Form::GradeTooLowException::what() const throw()
+{
+			return ("[ Grade too low ]");
+}
+
+const char *Form::GradeTooHighException::what() const throw()
+{
+		return ("[ Grade too high ]");
+}
+
+const char *Form::FormAlreadySigned::what() const throw()
+{
+	return ("[ Form already signed ]");
+}
 
 Form::Form(std::string name, int signGrade, int execGrade)
 	: _name(name), _signGrade(signGrade),
@@ -54,13 +69,10 @@ int Form::getExecGrade() const { return _execGrade; }
 
 void Form::beSigned(const Bureaucrat &bureaucrat)
 {
+	if (_formStat == true)
+		throw Form::FormAlreadySigned();
 	if (bureaucrat.getGrade() <= _signGrade)
-	{
 		_formStat = true;
-		std::cout << bureaucrat.getName() << " signs " << _name << "." << std::endl;
-	}
-	else if (_formStat == true)
-		throw FormAlreadySigned();
 	else
 		throw Form::GradeTooLowException();
 }

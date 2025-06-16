@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 23:00:33 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/15 14:59:25 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/16 16:25:21 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,13 @@ public:
 	class GradeTooHighException : public std::exception
 	{
 	public:
-		const char *what() const throw()
-		{
-			return ("[ Grade too high ]");
-		}
+		const char *what() const throw();
 	};
 
 	class GradeTooLowException : public std::exception
 	{
 	public:
-		const char *what() const throw()
-		{
-			return ("[ Grade too low ]");
-		}
+		const char *what() const throw();
 	};
 
 	void incrementGrade();
