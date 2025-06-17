@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 15:14:26 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/17 14:54:04 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/17 17:38:53 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,15 @@ void AForm::beSigned(const Bureaucrat &bureaucrat)
 		_formStat = true;
 	else
 		throw AForm::GradeTooLowException();
+}
+
+void AForm::execute(const Bureaucrat &executor) const
+{
+	if (this->getFormStatus() == false)
+		throw AForm::FormNotSigned();
+	if (this->getExecGrade() < executor.getGrade())
+		throw AForm::GradeTooLowException();
+	this->performAction();
 }
 
 std::ostream &operator<<(std::ostream &output, const AForm &obj)

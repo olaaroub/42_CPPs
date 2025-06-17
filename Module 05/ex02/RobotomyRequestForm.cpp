@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 11:16:59 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/17 15:15:38 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/17 17:49:53 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,8 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &o
 	}
 	return *this;
 }
-void RobotomyRequestForm::execute(const Bureaucrat &executor) const
+void RobotomyRequestForm::performAction() const
 {
-	if (this->getFormStatus() == false)
-		throw AForm::FormNotSigned();
-	if (this->getExecGrade() < executor.getGrade())
-		throw AForm::GradeTooLowException();
-
 	srand(time(0));
 	if (rand() % 2 == 0)
 	{

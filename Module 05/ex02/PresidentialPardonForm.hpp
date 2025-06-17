@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 21:55:53 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/17 15:16:25 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/17 17:49:21 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
 	PresidentialPardonForm &operator=(const PresidentialPardonForm &obj);
 	~PresidentialPardonForm();
 
-	void execute(const Bureaucrat &executor) const;
+	virtual void performAction() const;
 };
 
 #endif

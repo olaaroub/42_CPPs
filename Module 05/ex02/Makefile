@@ -3,10 +3,9 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 # CXXFLAGS += -fsanitize=address -g3
 # CXXFLAGS += -DDEBUG_MODE=1
 
+NAME = prog02
 
-NAME = prog00
-
-SRC = main.cpp #Bureaucrat.cpp Form.cpp
+SRC = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp ShruberryCreationForm.cpp RobotomyRequestForm.cpp
 
 
 OPATH = dependencies

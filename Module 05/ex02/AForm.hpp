@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 23:10:31 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/17 15:16:01 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/17 17:46:07 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,9 @@ private:
 
 	AForm();
 
+protected:
+	virtual void performAction() const = 0;
+
 public:
 	AForm(std::string name, int signGrade, int execGrade);
 	AForm(const AForm &obj);
@@ -50,7 +53,7 @@ public:
 
 	void beSigned(const Bureaucrat &bureaucrat);
 
-	virtual void execute(const Bureaucrat &executor) const = 0;
+	void execute(const Bureaucrat &executor) const;
 
 	class GradeTooHighException : public std::exception
 	{
