@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 23:24:53 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/16 17:01:40 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/17 14:55:39 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ const char *Bureaucrat::GradeTooHighException::what() const throw()
 
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
 {
-	std::cout << "[ Bureaucrat ] parameterized constructor for " << _name << " called!" << std::endl;
+	OCF_OUTPUT("[ Bureaucrat ] parameterized constructor for " << _name << " called!");
 
 	if (_grade < 1)
 		throw Bureaucrat::GradeTooHighException();
@@ -35,12 +35,12 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
 
 Bureaucrat::Bureaucrat(const Bureaucrat &obj) : _name(obj._name), _grade(obj._grade)
 {
-	std::cout << "[ Bureaucrat ] copy constructor called!" << std::endl;
+	OCF_OUTPUT("[ Bureaucrat ] copy constructor called!");
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &obj)
 {
-	std::cout << "[ Bureaucrat ] copy assignment operator called!" << std::endl;
+	OCF_OUTPUT("[ Bureaucrat ] copy assignment operator called!");
 	if (this != &obj)
 	{
 		_grade = obj._grade;
@@ -94,7 +94,7 @@ void Bureaucrat::executeForm(const AForm &form)
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << "Destructor for " << _name << " called!" << std::endl;
+	OCF_OUTPUT("Destructor for " << _name << " called!");
 }
 
 std::ostream &operator<<(std::ostream &output, const Bureaucrat &obj)

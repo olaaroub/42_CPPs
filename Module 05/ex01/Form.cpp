@@ -6,20 +6,20 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 15:14:26 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/16 22:23:34 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/17 14:45:51 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-const char* Form::GradeTooLowException::what() const throw()
+const char *Form::GradeTooLowException::what() const throw()
 {
-			return ("[ Grade too low ]");
+	return ("[ Grade too low ]");
 }
 
 const char *Form::GradeTooHighException::what() const throw()
 {
-		return ("[ Grade too high ]");
+	return ("[ Grade too high ]");
 }
 
 const char *Form::FormAlreadySigned::what() const throw()
@@ -31,7 +31,7 @@ Form::Form(std::string name, int signGrade, int execGrade)
 	: _name(name), _signGrade(signGrade),
 	  _execGrade(execGrade), _formStat(false)
 {
-	std::cout << "[ Form ] parameterized construcor for " << _name << " called!" << std::endl;
+	OCF_OUTPUT("[ Form ] parameterized construcor for " << _name << " called!");
 	if (_signGrade < 1 || _execGrade < 1)
 		throw Form::GradeTooHighException();
 	if (_signGrade > 150 || _execGrade > 150)
@@ -43,14 +43,14 @@ Form::Form(std::string name, int signGrade, int execGrade)
 
 Form::Form(const Form &obj)
 	: _name(obj._name), _signGrade(obj._signGrade),
-	  _execGrade(obj._execGrade), _formStat(false)
+	  _execGrade(obj._execGrade), _formStat(obj._formStat)
 {
-	std::cout << "[ Form ] copy constructor called!" << std::endl;
+	OCF_OUTPUT("[ Form ] copy constructor called!");
 }
 
 Form &Form::operator=(const Form &obj)
 {
-	std::cout << "[ Form ] copy assignment operator called!" << std::endl;
+	OCF_OUTPUT("[ Form ] copy assignment operator called!");
 	if (this != &obj)
 		_formStat = obj._formStat;
 	return *this;
@@ -58,7 +58,7 @@ Form &Form::operator=(const Form &obj)
 
 Form::~Form()
 {
-	std::cout << "[ Form ] destructor for " << _name << " called!" << std::endl;
+	OCF_OUTPUT("[ Form ] destructor for " << _name << " called!");
 }
 
 const std::string &Form::getName() const { return _name; }

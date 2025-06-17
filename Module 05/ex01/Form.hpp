@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 23:10:31 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/16 22:46:36 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/17 15:17:48 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,19 @@
 #define FORM_HPP
 
 #include <iostream>
-
 #include "Bureaucrat.hpp"
-
 class Bureaucrat;
+
+#ifndef DEBUG_MODE
+#define DEBUG_MODE 0
+#endif
+
+#if DEBUG_MODE
+#define OCF_OUTPUT(x) std::cout << x << std::endl
+#else
+#define OCF_OUTPUT(x)
+#endif
+
 class Form
 {
 private:

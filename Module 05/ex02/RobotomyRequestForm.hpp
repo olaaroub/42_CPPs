@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/12 16:07:46 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/17 11:47:45 by olaaroub         ###   ########.fr       */
+/*   Created: 2025/06/17 11:11:37 by olaaroub          #+#    #+#             */
+/*   Updated: 2025/06/17 15:16:32 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Bureaucrat.hpp"
+#ifndef ROBOTOMYREQUESTFORM_HPP
+#define ROBOTOMYREQUESTFORM_HPP
+
 #include "AForm.hpp"
 
-int main()
+class RobotomyRequestForm : public AForm
 {
+private:
+	std::string _target;
 
-    try
-    {
-    }
-    catch (std::exception &e)
-    {
-        std::cout << "[ Exception ] : " << e.what() << std::endl;
-    }
+	RobotomyRequestForm();
 
+public:
+	RobotomyRequestForm(std::string target);
+	RobotomyRequestForm(const RobotomyRequestForm &obj);
+	RobotomyRequestForm &operator=(const RobotomyRequestForm &obj);
+	~RobotomyRequestForm();
 
-    return (0);
-}
+	void execute(const Bureaucrat &execetor) const;
+};
+
+#endif

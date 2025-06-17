@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 15:14:26 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/16 17:00:23 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/17 14:54:04 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ AForm::AForm(std::string name, int signGrade, int execGrade)
 	: _name(name), _signGrade(signGrade),
 	  _execGrade(execGrade), _formStat(false)
 {
-	std::cout << "[ AForm ] parameterized construcor for " << _name << " called!" << std::endl;
+	OCF_OUTPUT("[ AForm ] parameterized construcor for " << _name << " called!");
 	if (_signGrade < 1 || _execGrade < 1)
 		throw AForm::GradeTooHighException();
 	if (_signGrade > 150 || _execGrade > 150)
@@ -49,14 +49,14 @@ AForm::AForm(std::string name, int signGrade, int execGrade)
 
 AForm::AForm(const AForm &obj)
 	: _name(obj._name), _signGrade(obj._signGrade),
-	  _execGrade(obj._execGrade), _formStat(false)
+	  _execGrade(obj._execGrade), _formStat(obj._formStat)
 {
-	std::cout << "[ AForm ] copy constructor called!" << std::endl;
+	OCF_OUTPUT("[ AForm ] copy constructor called!");
 }
 
 AForm &AForm::operator=(const AForm &obj)
 {
-	std::cout << "[ AForm ] copy assignment operator called!" << std::endl;
+	OCF_OUTPUT("[ AForm ] copy assignment operator called!");
 	if (this != &obj)
 		_formStat = obj._formStat;
 	return *this;
@@ -64,7 +64,7 @@ AForm &AForm::operator=(const AForm &obj)
 
 AForm::~AForm()
 {
-	std::cout << "[ AForm ] destructor for " << _name << " called!" << std::endl;
+	OCF_OUTPUT("[ AForm ] destructor for " << _name << " called!");
 }
 
 const std::string &AForm::getName() const { return _name; }
