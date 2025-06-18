@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 22:47:06 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/18 01:07:42 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/18 01:16:24 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ Intern::~Intern() { OCF_OUTPUT("[ Intern ] Destructor called!"); }
 
 AForm *Intern::makeForm(std::string formName, std::string formTarget)
 {
+
 	if (formName.empty() || formTarget.empty())
 	{
 		std::cerr << "Form name or target cannot be empty!" << std::endl;
@@ -46,6 +47,7 @@ AForm *Intern::makeForm(std::string formName, std::string formTarget)
 	for (size_t i = 0; i < formName.length(); i++)
 		lowerName += std::tolower(formName[i]);
 	std::string names[] = {"robotomy request", "shrubbery creation", "presidential pardon"};
+	std::string names2[] = {"robotomy request", "shrubbery creation", "presidential pardon"};
 
 	int i = 0;
 	for (; i < 3; i++)
