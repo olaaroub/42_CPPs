@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShruberryCreationForm.hpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/17 16:45:53 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/17 17:51:59 by olaaroub         ###   ########.fr       */
+/*   Created: 2025/06/17 11:11:37 by olaaroub          #+#    #+#             */
+/*   Updated: 2025/06/17 17:50:16 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBERRYCREATIONFORM_HPP
-#define SHRUBERRYCREATIONFORM_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
+#define ROBOTOMYREQUESTFORM_HPP
 
 #include "AForm.hpp"
 
-class ShruberryCreationForm : public AForm
+class RobotomyRequestForm : public AForm
 {
 private:
 	std::string _target;
 
-	ShruberryCreationForm();
+	RobotomyRequestForm();
 
 public:
-	ShruberryCreationForm(std::string target);
-	ShruberryCreationForm(const ShruberryCreationForm &obj);
-	ShruberryCreationForm &operator=(const ShruberryCreationForm &obj);
-	~ShruberryCreationForm();
-
-	class FailedToCreateOutFile : public std::exception
-	{
-	public:
-		const char *what() const throw();
-	};
+	RobotomyRequestForm(std::string target);
+	RobotomyRequestForm(const RobotomyRequestForm &obj);
+	RobotomyRequestForm &operator=(const RobotomyRequestForm &obj);
+	~RobotomyRequestForm();
 
 	virtual void performAction() const;
 };

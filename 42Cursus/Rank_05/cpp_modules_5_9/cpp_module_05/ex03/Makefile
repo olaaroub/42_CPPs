@@ -11,7 +11,7 @@ INCS	:=	Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp \
 
 OBJS	:=	$(SRCS:.cpp=.o)
 
-%.o:%.c 
+%.o:%.c
 	$(CC) -I $(INCS) -c $< -o $@
 
 all:		$(NAME)
