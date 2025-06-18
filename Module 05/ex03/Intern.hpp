@@ -6,7 +6,7 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 22:41:59 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/18 01:11:13 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/18 17:59:15 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,15 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 
+#ifndef DEBUG_MODE
+#define DEBUG_MODE 0
+#endif
+
+#if DEBUG_MODE
+#define OCF_OUTPUT(x) std::cout << x << std::endl
+#else
+#define OCF_OUTPUT(x)
+#endif
 class Intern
 {
 public:
@@ -28,6 +37,7 @@ public:
 	~Intern();
 
 	AForm *makeForm(std::string formName, std::string formTarget);
+	AForm *getForm(std::string formName, std::string formTarget);
 
 	class FormNotFound : public std::exception
 	{

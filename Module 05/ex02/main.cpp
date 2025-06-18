@@ -6,64 +6,59 @@
 /*   By: olaaroub <olaaroub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 16:07:46 by olaaroub          #+#    #+#             */
-/*   Updated: 2025/06/18 00:35:06 by olaaroub         ###   ########.fr       */
+/*   Updated: 2025/06/18 17:57:03 by olaaroub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Bureaucrat.hpp"
 #include "AForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
-#include <unistd.h>
 
 int main()
 {
+	try
+	{
+		AForm *form1 = new PresidentialPardonForm("Dani Alves");
+		AForm *form2 = new RobotomyRequestForm("Haaland");
+		AForm *form3 = new ShrubberyCreationForm("Xavi");
 
-    try
-    {
-        Bureaucrat bureaucrat("Oussama", 137);
-        AForm *form = new PresidentialPardonForm("presidential form");
-        AForm *form2 = new RobotomyRequestForm("Robot request");
-        AForm *form3 = new ShrubberyCreationForm("home");
+		std::cout << "================================================" << std::endl;
 
-        std::cout << "===============================" << std::endl;
+		Bureaucrat Messi("Messi", 1);
+		Bureaucrat Raphinha("Raphinha", 20);
+		Bureaucrat Lewa("Lewa", 120);
 
-        // std::cout << *form << std::endl;
+		std::cout << "================================================" << std::endl;
 
-        // std::cout << "===============================" << std::endl;
-        // bureaucrat.signForm(*form);
-        // bureaucrat.executeForm(*form);
-        // bureaucrat.executeForm(*form);
-        // std::cout << "===============================" << std::endl;
-        // std::cout << *form << std::endl;
+		Messi.executeForm(*form1);
+		Raphinha.signForm(*form1);
+		Messi.signForm(*form1);
+		Lewa.signForm(*form1);
+		std::cout << *form1 << std::endl;
+		Lewa.executeForm(*form1);
+		Messi.executeForm(*form1);
 
-        // std::cout << *form2 << std::endl;
+		std::cout << "=================================================" << std::endl;
 
-        // std::cout << "===============================" << std::endl;
-        // bureaucrat.signForm(*form2);
-        // bureaucrat.signForm(*form2);
-        // bureaucrat.executeForm(*form2);
-        // std::cout << "===============================" << std::endl;
-        // std::cout << *form2 << std::endl;
+		Raphinha.signForm(*form2);
+		std::cout << *form2 << std::endl;
+		Messi.executeForm(*form2);
 
-        std::cout << *form3 << std::endl;
+		std::cout << "=================================================" << std::endl;
 
-        std::cout << "===============================" << std::endl;
-        bureaucrat.signForm(*form3);
-        bureaucrat.executeForm(*form3);
-        std::cout << "===============================" << std::endl;
-        std::cout << *form3 << std::endl;
+		Lewa.signForm(*form3);
+		std::cout << *form3 << std::endl;
+		Messi.executeForm(*form3);
 
-        delete form;
-        delete form2;
-        delete form3;
-    }
-    catch (std::exception &e)
-    {
-        std::cout << "[ Exception ] : " << e.what() << std::endl;
-    }
+		std::cout << "=================================================" << std::endl;
 
-    return (0);
+		delete form1;
+		delete form2;
+		delete form3;
+	}
+	catch (std::exception &e)
+	{ std::cerr << "[ Exception ] : " << e.what() << std::endl; }
+
+	return 0;
 }
